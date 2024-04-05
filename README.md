@@ -1,9 +1,9 @@
 # SLIDE-x
 **S**ystem-**L**evel **I**nfrastructure for HW/SW **D**ataset **E**-**x**traction
 
-# SLIDE-x-Core:
+# SLIDE-x Main Components:
 1. **SLIDE-x-Bench**: Extensible C-based Benchmark
-2. **SLIDE-x-ENGINE**:
+2. **SLIDE-x-CORE**:
    - **SLIDE-x-Data**: Extensible Python Data-driven Module
    - **SLIDE-x-Code**: Extensible Python Code-driven Module
    - **SLIDE-x-Sim**: Extensible Python HW/SW Simulation-driven Module
