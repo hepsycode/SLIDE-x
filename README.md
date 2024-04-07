@@ -137,18 +137,6 @@ If you use SLIDE-x in your research, please cite:
 	address = {New York, NY, USA},
 	url = {https://doi.org/10.1145/3185768.3186291},
 	doi = {10.1145/3185768.3186291},
-	abstract = {Outlining the general characteristics of embedded systems is an arduous task.
-	In fact, the design of such kind of systems is heavily influenced by functional and
-	non-functional requirements, and it is based on quite complex design flows. So, there
-	is often the need to adopt a HW/SW co-design methodology able to support the designers
-	during high-level phases so that they can perform early analysis before dealing with
-	low-level ones. Such a methodology, to be effective, should consider also performance
-	estimation and ESL HW/SW timing co-simulation. The goal of this paper is to introduce
-	a novel and fast performance metric able to speed-up the early analysis and design
-	space exploration to identify the more promising architectures for different application
-	domains. In particular, the paper presents a framework to evaluate such a metric and
-	to perform some preliminary analysis to evaluate its meaningfulness when exploited
-	in the HW/SW domain.},
 	booktitle = {Companion of the 2018 ACM/SPEC International Conference on
 	Performance Engineering},
 	pages = {119–122},
