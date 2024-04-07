@@ -10,7 +10,7 @@
 ## Installation instructions
 
 ### OVERVIEW
- SLIDE-x is an open-source Python tool that facilitates the co-design of HW and SW for embedded systems and cyber-physical systems (CPSs) through the creation of datasets useful for analysis, comparison, and simulation. These datasets can be used to evaluate HW/SW performance, select the most suitable embedded platform, and perform HW/SW trade-off analysis.
+ SLIDE-x is an open-source Python tool that facilitates the co-design of HW and SW for embedded systems and cyber-physical systems (CPSs) through the creation of datasets useful for analysis, comparison, and simulations/predictions. These datasets can be used to evaluate HW/SW performance, select the most suitable embedded platform, and perform HW/SW trade-off analysis.
 
 ### SLIDE-x Main Components
 SLIDE-x consists of several components:
