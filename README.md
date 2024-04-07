@@ -35,9 +35,7 @@ SLIDE-x is open-source and freely available on GitHub: https://github.com/hepsyc
 
 ### SCREENSHOT
 
-<p align="center">
-<img src="img/screen.png" width="700" height="387">
-</p>
+<p><img src="img/screen.png" width="700" height="387"></p>
 
 ### INSTALLATION
 The installation of the framework goes through a few simple steps. All that is required is to install the tools exploited by the framework at each step: Profiling (i.e., gcov), Static Analysis (i.e., Frama-c), and Simulation (i.e., ISS/HLS). For a deeper insight into the commands executed to perform each phase, the user can look at the `/SLIDE-x-CORE/src/cmds.json` file.
