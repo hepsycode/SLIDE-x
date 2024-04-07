@@ -27,7 +27,7 @@ SLIDE-x consists of the following components:
 
 SLIDE-x supports synthesis for FPGAs through the **SLIDE-x-FPGA** parser and System-on-Chips (SoCs) through the **SLIDE-x-SoC** parser. Application-Specific Integrated Circuit (ASIC) support is under development.
 
-SLIDE-x can be used to enhance Systel-Level HW/SW Co-Design methodologies, frameworks, and tools functionalities such as HEPSYCODE, a `System-Level methodology and tool for HW/SW **CO-DE**sign of **HE**terogeneous **P**arallel dedicated **SY**stems`. The enhanced version is called **HEPSYCODE-x**. SLIDE-x can be also used to define metrics for exploring the design space of embedded systems and CPSs. It has been used in HEPSYCODE to improve the `Partitioning, Architecture definition, and Mapping` (PAM) design space exploration tool. The improved version, called **PAM-x** uses GIMPLE-SSA-OPTIMIZED intermediate representations (IR).
+SLIDE-x can be used to enhance Systel-Level HW/SW Co-Design methodologies, frameworks, and tools functionalities such as HEPSYCODE, a System-Level methodology and tool for HW/SW **CO-DE**sign of **HE**terogeneous **P**arallel dedicated **SY**stems. The enhanced version is called **HEPSYCODE-x**. SLIDE-x can be also used to define metrics for Design Space Exploration (DSE) of embedded systems and CPSs. It has been used in HEPSYCODE to improve the **P**artitioning, **A**rchitecture definition, and **M**apping (PAM) DSE tool. The improved version, called **PAM-x** uses GIMPLE-SSA-OPTIMIZED intermediate representations (IR).
 
 ### WEBSITE
 [www.HEPSYCODE.com](https://hepsycode.github.io/)
