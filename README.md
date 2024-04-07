@@ -127,8 +127,8 @@ Research publications are available at https://hepsycode.github.io/ and http://w
 If you use SLIDE-x in your research, please cite:
 ```
 @inproceedings{Muttillo2018,
-	author = {Muttillo, Vittoriano and Valente, Giacomo and Pomante, Luigi and Stoico,
-	Vincenzo and D'Antonio, Fausto and Salice, Fabio},
+	author = {Muttillo, Vittoriano and Valente, Giacomo and Pomante, Luigi and
+	Stoico, Vincenzo and D'Antonio, Fausto and Salice, Fabio},
 	title = {CC4CS: an Off-the-Shelf Unifying Statement-Level Performance Metric
 	for HW/SW Technologies},
 	year = {2018},
