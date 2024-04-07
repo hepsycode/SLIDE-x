@@ -72,7 +72,7 @@ The simulation phase involves the execution of the toolchain for each processor 
  	- **[arm-none-eabi-gcc](https://developer.arm.com/downloads/-/gnu-rm)**: the cross-compiler for the ARM architecture;
  	- **Thumbulator**:
 	   	- **[thumbulator](https://github.com/hepsycode/Thumbulator)**: the cycle-accurate ARMv6-M (Cortex-M0) simulator;
-    	- **Armulator**:
+ 	- **Armulator**:
 	   	- **[armulator](https://github.com/hepsycode/Armulator)**: the ARM v4T simulator;
 
  - **RISC-V**:
