@@ -1,6 +1,10 @@
 # SLIDE-x
 **S**ystem-**L**evel **I**nfrastructure for HW/SW **D**ataset **E**-**x**traction
 
+<p align="center">
+<img src="img/logo.png" width="200" height="200">
+</p>
+
 # SLIDE-x Main Components:
 1. **SLIDE-x-Bench**: Extensible C-based Benchmark
 2. **SLIDE-x-CORE**:
