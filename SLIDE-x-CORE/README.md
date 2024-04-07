@@ -1,0 +1,3 @@
+# SLIDE-x-CORE
+
+WIP
