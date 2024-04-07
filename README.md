@@ -65,7 +65,9 @@ The simulation phase involves the execution of the toolchain of each processor s
 
 - 8051:
 	- **[sdcc](http://sdcc.sourceforge.net/)** : the cross-compiler for the 8051;
-	- **[isasim](http://www.newit.gsu.by/resources/CPUs/i8051/VHDL/Synthesizeable%20VHDL%20Model%20of%208051.htm)** : the simulator of the 8051;
+   	- **[isasim](http://www.newit.gsu.by/resources/CPUs/i8051/VHDL/Synthesizeable%20VHDL%20Model%20of%208051.htm)** : the simulator of the 8051;
+ 	- **[isasim zip files](http://www.pomante.net/sito_gg/EmbeddedSystems2324/06_HOMELAB_8051_web.zip)**: 8051 ISS zip package;
+	
  - Thumbulator:
  - Armulator:
  - Spike RISC-V ISA Simulator:
