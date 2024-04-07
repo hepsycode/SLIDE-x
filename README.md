@@ -27,20 +27,18 @@ SLIDE-x consists of several components:
 
 SLIDE-x supports synthesis for FPGAs through the **SLIDE-x-FPGA** parser and System-on-Chips (SoCs) through the **SLIDE-x-SoC** parser. Application-Specific Integrated Circuit (ASIC) support is under development.
 
-SLIDE-x can be used to enhance Systel-Level HW/SW Co-Design frameworks and tools functionalities such as HEPSYCODE, a tool for embedded system design space exploration. The enhanced version is called **HEPSYCODE-x**.
-
-SLIDE-x can be also used to define metrics for exploring the design space of embedded systems and CPSs. It has been used in HEPSYCODE to improve the `Partitioning, Architecture definition, and Mapping` (PAM) design space exploration tool. The improved version, called **PAM-x** uses GIMPLE-SSA-OPTIMIZED intermediate representations.
+SLIDE-x can be used to enhance Systel-Level HW/SW Co-Design frameworks and tools functionalities such as HEPSYCODE, a System-Level methodology and tool for HW/SW **CO-DE**sign of **HE**terogeneous **P**arallel dedicated **SY**stems. The enhanced version is called **HEPSYCODE-x**. SLIDE-x can be also used to define metrics for exploring the design space of embedded systems and CPSs. It has been used in HEPSYCODE to improve the `Partitioning, Architecture definition, and Mapping` (PAM) design space exploration tool. The improved version, called **PAM-x** uses GIMPLE-SSA-OPTIMIZED intermediate representations.
 
 ### WEBSITE
 [www.HEPSYCODE.com](https://hepsycode.github.io/)
 
 ### DOWNLOAD
-SLIDE-x is open-source and freely available on GitHub: https://github.com/hepsycode/SLIDE-x
+SLIDE-x is open-source and freely available on GitHub: https://github.com/hepsycode/SLIDE-x.
 
 ### INSTALLATION
 The installation of the framework goes through a few simple steps. All that is required is to install the tools exploited by the framework at each step: Profiling (i.e., gcov), Static Analysis (i.e., Frama-c), and Simulation (i.e., ISS/HLS). For a deeper insight into the commands executed to perform each phase, the user can look at the `/SLIDE-x-CORE/src/cmds.json` file.
 
-The framework is implemented in Python3 and uses the csv, os, shutil, subprocess, tkinter libraries for internal operations. Thus, Python3 and the above listed libraries should be installed for the framwork to run properly. 
+The framework is implemented in Python3 and uses the csv, os, shutil, subprocess, tkinter libraries for internal operations. Thus, Python3 and the above-listed libraries should be installed for the framework to run properly. 
 
 #### Profiling
 The profiling phase requires the execution of [gcc](https://gcc.gnu.org/gcc/) and [gcov](https://gcc.gnu.org/onlinedocs/gcc/Gcov.html).
