@@ -55,31 +55,31 @@ This step requires the [frama-c](https://frama-c.com/) software analyzer.
 #### Simulation 
 The simulation phase involves the execution of the toolchain of each processor supported by the framework. The following is a description of each supported processor and the tools needed to get the information required to calculate CC4CS:
 
-- Atmega328p: 
+- **Atmel AVR family**: 
 	- **[simulavr](https://www.nongnu.org/simulavr/)**: the instruction set simulator of the Atmega328p;
 	- **[avr-gcc](https://gcc.gnu.org/wiki/avr-gcc)**: the cross-compiler for the AVR ISA;
 
-- Leon3: 
+- **LEON3**: 
 	- **[tsim-leon3](https://www.gaisler.com/index.php/downloads/simulators)**: the instruction set simulator for the LEON3;  
 	- **[sparc-gaisler-elf-gcc](https://www.gaisler.com/index.php/downloads/compilers)**: the cross-compiler for the SPARC ISA;
 
-- 8051:
+- **Intel MCS-51 (8051)**:
 	- **[sdcc](http://sdcc.sourceforge.net/)**: the cross-compiler for the 8051;
    	- **[isasim](http://www.newit.gsu.by/resources/CPUs/i8051/VHDL/Synthesizeable%20VHDL%20Model%20of%208051.htm)**: the simulator of the 8051;
  	- **[isasim zip files](http://www.pomante.net/sito_gg/EmbeddedSystems2324/06_HOMELAB_8051_web.zip)**: 8051 ISS zip package;
 	
- - ARM ISS:
+ - **ARM**:
  	- **[arm-none-eabi-gcc](https://developer.arm.com/downloads/-/gnu-rm)**: the cross-compiler for the ARM architecture;
  	- Thumbulator:
 	   	- **[thumbulator](https://github.com/hepsycode/Thumbulator)**: the cycle-accurate ARMv6-M (Cortex-M0) simulator;
     	- Armulator:
 	   	- **[armulator](https://github.com/hepsycode/Armulator)**: the ARM v4T simulator;
 
- - Spike RISC-V ISA Simulator:
+ - **RISC-V**:
  	- **[riscv64-unknown-elf-gcc](https://github.com/riscv-collab/riscv-gnu-toolchain/tree/master)**: the cross-compiler for the RiscV;
- 	- **[Spike](https://github.com/hepsycode/Riscv-isa-sim)**: the simulator of the RISC-V (Functional);
+ 	- **[Spike](https://github.com/hepsycode/Riscv-isa-sim)**: the Spike RISC-V ISA Simulator (Functional);
 
- - Bambu HLS:
+ - **Bambu HLS**:
  	- **[PandA-bambu](https://github.com/hepsycode/PandA-bambu)**: PandA Bambu HLS Framework;
 
 ### RELEASE NOTES
