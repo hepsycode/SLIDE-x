@@ -10,24 +10,24 @@
 ## Installation instructions
 
 ### OVERVIEW
- SLIDE-x is an open-source Python tool that facilitates the co-design of HW and SW for embedded systems and cyber-physical systems (CPSs) through the creation of datasets useful for analysis, comparison, and simulations/predictions. These datasets can be used to evaluate HW/SW performance, select the most suitable embedded platform, and perform HW/SW trade-off analysis.
+ SLIDE-x is an open-source Python tool that facilitates the System-Level HW/SW Co-Design of embedded systems and Cyber-Physical Systems (CPSs) through the creation of datasets useful for analysis, comparison, and simulations/predictions. These datasets can be used to evaluate HW/SW performance, select the most suitable embedded platform, and perform HW/SW trade-off analysis.
 
 ### SLIDE-x Main Components
-SLIDE-x consists of several components:
+SLIDE-x consists of the following components:
 
-1. **SLIDE-x-Bench**: Extensible C-based benchmark for evaluating HW/SW performance.
-2. **SLIDE-x-CORE**: The SLIDE-x core (kernel) component
-   - **SLIDE-x-Data**: Extensible Python Data-driven component, where designers can (semi)automatically generate inputs for the benchmark functions. The function parameters are specified in a JSON file (`cmds.json`) contained in the same directory of the function. The component reads a range `[x; y]` used to generate the values of the parameters and the number of inputs to be created. Finally, for each function, different data types have been considered (i.e., int8, int16, int32, int64, float, and double) to analyze the results for the internal  architecture of the considered processor.
+1. **SLIDE-x-Bench**: Extensible C-based benchmark component for evaluating HW/SW performance;
+2. **SLIDE-x-CORE**: The SLIDE-x core engine component;
+   - **SLIDE-x-Data**: Extensible Python Data-driven component, where designers can (semi)automatically generate inputs for the benchmark functions. The function parameters are specified in a JSON file (`cmds.json`) contained in the same directory of the function. The component reads a range `[x; y]` used to generate the values of the parameters and the number of inputs to be created. Finally, for each function, different data types have been considered (i.e., int8, int16, int32, int64, float, and double) to analyze the results for the internal architecture of the considered processor.
    - **SLIDE-x-Code**: Extensible Python Code-driven component, where several code-oriented metrics are extracted by profiling the benchmark functions using the `gcov` and `frama-c` tools for each generated input. It is worth noting that such profiling is performed one-shot on the host platform since it is independent of the target processor technologies.
    - **SLIDE-x-Sim**: Extensible Python HW/SW Simulation-driven component, where designers can execute the benchmark C function using several simulators for different processors. The component saves metrics related to the number of clock cycles, instructions executed, cache miss/hit/access, etc. Depending on the processor technology, an Instruction Set Simulator (ISS) or an HDL Simulator is needed, such as:
      - **SLIDE-x-HLS** Integration with High-Level Synthesis (HLS) tools such as Bambu, Vitis-HLS, and LegUP.
      - **SLIDE-x-ISS** Integration with Instruction Set Simulators (ISS) such as TSIM, Armulator, Thumbulator, Dalton SDCC/ISASIM, SimulAVR, Spike 64-bit RISC-V, x86-64 with Perf.
-3. **SLIDE-x-AGGR**: Extensible Python dataset Aggregator component for aggregating datasets generated during the Profiling/Simulation activities. It also offers functionalities for implementing unified HW/SW metrics (e.g., CC4CS, CC4IR, CC4SSA, CC4OPT), performing statistical analysis, and comparing different platforms.
-4. **SLIDE-x-ML**: HW/SW ML-based component for creating HW/SW co-design ML models using machine learning frameworks and tools, including MATLAB Statistics and Machine Learning Toolbox (for MATLAB) and TensorFlow/Keras/PyTorch/Scikit-Learn (for Python).
+3. **SLIDE-x-AGGR**: Extensible Python Dataset Aggregator component for aggregating datasets generated during the Profiling/Simulation activities. It also offers functionalities for implementing unified HW/SW metrics (e.g., CC4CS, CC4IR, CC4SSA, CC4OPT, Affinity), performing statistical analysis, and comparing different platforms.
+4. **SLIDE-x-ML**: HW/SW ML-based component for creating System-Level HW/SW Co-Design models using machine learning frameworks and tools, including MATLAB Statistics and Machine Learning Toolbox (for MATLAB) and TensorFlow/Keras/PyTorch/Scikit-Learn (for Python).
 
 SLIDE-x supports synthesis for FPGAs through the **SLIDE-x-FPGA** parser and System-on-Chips (SoCs) through the **SLIDE-x-SoC** parser. Application-Specific Integrated Circuit (ASIC) support is under development.
 
-SLIDE-x can be used to enhance Systel-Level HW/SW Co-Design frameworks and tools functionalities such as HEPSYCODE, a System-Level methodology and tool for HW/SW **CO-DE**sign of **HE**terogeneous **P**arallel dedicated **SY**stems. The enhanced version is called **HEPSYCODE-x**. SLIDE-x can be also used to define metrics for exploring the design space of embedded systems and CPSs. It has been used in HEPSYCODE to improve the `Partitioning, Architecture definition, and Mapping` (PAM) design space exploration tool. The improved version, called **PAM-x** uses GIMPLE-SSA-OPTIMIZED intermediate representations.
+SLIDE-x can be used to enhance Systel-Level HW/SW Co-Design methodologies, frameworks, and tools functionalities such as HEPSYCODE, a `System-Level methodology and tool for HW/SW **CO-DE**sign of **HE**terogeneous **P**arallel dedicated **SY**stems`. The enhanced version is called **HEPSYCODE-x**. SLIDE-x can be also used to define metrics for exploring the design space of embedded systems and CPSs. It has been used in HEPSYCODE to improve the `Partitioning, Architecture definition, and Mapping` (PAM) design space exploration tool. The improved version, called **PAM-x** uses GIMPLE-SSA-OPTIMIZED intermediate representations (IR).
 
 ### WEBSITE
 [www.HEPSYCODE.com](https://hepsycode.github.io/)
@@ -53,7 +53,7 @@ The profiling phase requires the execution of [gcc](https://gcc.gnu.org/gcc/) an
 This step requires the [frama-c](https://frama-c.com/) software analyzer.
 
 #### Simulation 
-The simulation phase involves the execution of the toolchain of each processor supported by the framework. The following is a description of each supported processor and the tools needed to get the information required to calculate CC4CS:
+The simulation phase involves the execution of the toolchain for each processor supported by the framework. The following is a description of each supported processor and the tools needed to get the information required to extract HW/SW metrics:
 
 - **Atmel AVR family**: 
 	- **[simulavr](https://www.nongnu.org/simulavr/)**: the instruction set simulator of the Atmega328p;
@@ -70,9 +70,9 @@ The simulation phase involves the execution of the toolchain of each processor s
 	
  - **ARM**:
  	- **[arm-none-eabi-gcc](https://developer.arm.com/downloads/-/gnu-rm)**: the cross-compiler for the ARM architecture;
- 	- Thumbulator:
+ 	- **Thumbulator**:
 	   	- **[thumbulator](https://github.com/hepsycode/Thumbulator)**: the cycle-accurate ARMv6-M (Cortex-M0) simulator;
-    	- Armulator:
+    	- **Armulator**:
 	   	- **[armulator](https://github.com/hepsycode/Armulator)**: the ARM v4T simulator;
 
  - **RISC-V**:
@@ -102,8 +102,6 @@ For any bug or doubt, contact us or open an issue.
 We currently support:
 
  1. Email: 
-    - Luigi Pomante:
-    	- luigi.pomante@univaq.it
     - Vittoriano Muttillo:
        - vittoriano.muttillo@guest.univaq.it,
        - vmuttillo@unite.it
