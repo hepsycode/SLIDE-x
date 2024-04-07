@@ -1,13 +1,9 @@
 # SLIDE-x
 **S**ystem-**L**evel **I**nfrastructure for HW/SW **D**ataset **E**-**x**traction
 
-<p align="center">
-<img src="img/logo_NEW.png" width="250" height="250">
-</p>
+<p><img src="img/logo_NEW.png" width="250" height="250"></p>
 
-<p align="center">
-<img src="https://img.shields.io/badge/License-GPLv3-blue.svg">
-</p>
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 ## Installation instructions
 
