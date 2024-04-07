@@ -25,7 +25,7 @@ SLIDE-x consists of several components:
 3. **SLIDE-x-AGGR**: Extensible Python dataset Aggregator component for aggregating datasets generated during the Profiling/Simulation activities. It also offers functionalities for implementing unified HW/SW metrics (e.g., CC4CS, CC4IR, CC4SSA, CC4OPT), performing statistical analysis, and comparing different platforms.
 4. **SLIDE-x-ML**: HW/SW ML-based component for creating HW/SW co-design ML models using machine learning frameworks and tools, including MATLAB Statistics and Machine Learning Toolbox (for MATLAB) and TensorFlow/Keras/PyTorch/Scikit-Learn (for Python).
 
-SLIDE-x supports synthesis for FPGAs (FPGAs) through **SLIDE-x-FPGA** parser and SoCs (System-on-Chip) through **SLIDE-x-SoC** parser. ASIC (Application-Specific Integrated Circuit) support is under development.
+SLIDE-x supports synthesis for FPGAs through the **SLIDE-x-FPGA** parser and System-on-Chips (SoCs) through the **SLIDE-x-SoC** parser. Application-Specific Integrated Circuit (ASIC) support is under development.
 
 SLIDE-x can be used to enhance Systel-Level HW/SW Co-Design frameworks and tools functionalities such as HEPSYCODE, a tool for embedded system design space exploration. The enhanced version is called **HEPSYCODE-x**.
 
