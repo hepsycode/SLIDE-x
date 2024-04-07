@@ -7,7 +7,7 @@
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
-<p align="center">License: GPL v3
+<p align="center">
 <img src="https://img.shields.io/badge/License-GPLv3-blue.svg">
 </p>
 
