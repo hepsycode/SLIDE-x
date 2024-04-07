@@ -68,11 +68,11 @@ Latest Release: 2.0.0
 GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007 (see https://www.gnu.org/licenses/gpl-3.0.en.html)
  
 ### DEVELOPER RESOURCES
-Source Repositories: https://github.com/HEPSYCODE/HEPSYCODE-AIDOaRt
+Source Repositories: [https://github.com/hepsycode/SLIDE-x](https://github.com/hepsycode/SLIDE-x)
 
 - Clone: 
-    - ssh: git@github.com:hepsycode/SLIDE-x.git
-    - https: [https://github.com/HEPSYCODE/HEPSYCODE-AIDOaRt.git](https://github.com/hepsycode/SLIDE-x.git)
+    - ssh: [git@github.com:hepsycode/SLIDE-x.git](git@github.com:hepsycode/SLIDE-x.git)
+    - https: [https://github.com/hepsycode/SLIDE-x.git](https://github.com/hepsycode/SLIDE-x.git)
  
 You can use the code from these repositories to experiment, test, build, and create patches, and issue pull requests (only by request).
 For any bug or doubt, contact us or open an issue.
