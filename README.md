@@ -149,7 +149,8 @@ If you use SLIDE-x in your research, please cite:
 	domains. In particular, the paper presents a framework to evaluate such a metric and
 	to perform some preliminary analysis to evaluate its meaningfulness when exploited
 	in the HW/SW domain.},
-	booktitle = {Companion of the 2018 ACM/SPEC International Conference on Performance Engineering},
+	booktitle = {Companion of the 2018 ACM/SPEC International Conference on
+	Performance Engineering},
 	pages = {119–122},
 	numpages = {4},
 	keywords = {system-level metrics, embedded systems, HW/SW co-design},
