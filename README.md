@@ -2,7 +2,7 @@
 **S**ystem-**L**evel **I**nfrastructure for HW/SW **D**ataset **E**-**x**traction
 
 <p align="center">
-<img src="img/logo.png" width="250" height="250">
+<img src="img/logo_NEW.png" width="250" height="250">
 </p>
 
 # SLIDE-x Main Components:
