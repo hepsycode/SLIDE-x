@@ -10,8 +10,14 @@
 ## Installation instructions
 
 ### OVERVIEW
+SLIDE-x
+A framework has been developed to calculate the CC4CS metrics. You can execute a custom C function using with several ISSs (Instruction Set Simulators) of different processors. The framework has been developed in Python and includes a simple benchmark composed by 10 well-know algorithms. The source code of the algorithms is contained in /framework/benchmark directory.  
 
-# SLIDE-x Main Components:
+The framework is structured in three modules: the InputsGenerator, Parser, and the CommandsManager. The InputsGenerator (semi)automatically generates inputs for a function. The parameters of a function are specified in a json file (`cmds.json`) contained in the same directory of the function. The InputsGenerator reads a range `[x; y]` that is used to generate the values of the parameters and the number of inputs to be created. Finally, for each function, different data types have been considered (i.e., int8, int16, int32, and float) to analyze the results with respect to the internal  architecture of the considered processor.
+
+The number of executed C statements is obtained by profiling the benchmark functions using the `gcov` profiler for each generated input. It is worth noting that such a profiling is performed one-shot on the  host platform since it is independent of the target processor technologies. Instead, the clock cycles needed by the target processor technology to execute each function in the benchmark. Depending on the processor technology there is the need for an Instruction Set Simulator (ISS) or an HDL Simulator.
+
+### SLIDE-x Main Components:
 1. **SLIDE-x-Bench**: Extensible C-based Benchmark
 2. **SLIDE-x-CORE**:
    - **SLIDE-x-Data**: Extensible Python Data-driven Module
