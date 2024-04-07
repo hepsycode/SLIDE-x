@@ -109,5 +109,23 @@ To get started with SLIDE-x, you can:
 Research publications are available at https://hepsycode.github.io/ and http://www.pomante.net/sito_gg/Publications.htm
 
 ## How to Cite?
-
-Coming soon
+If you use SLIDE-x in your research, please cite:
+```
+@inproceedings{Muttillo2018,
+author = {Muttillo, Vittoriano and Valente, Giacomo and Pomante, Luigi and Stoico, Vincenzo and D'Antonio, Fausto and Salice, Fabio},
+title = {CC4CS: an Off-the-Shelf Unifying Statement-Level Performance Metric for HW/SW Technologies},
+year = {2018},
+isbn = {9781450356299},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3185768.3186291},
+doi = {10.1145/3185768.3186291},
+abstract = {Outlining the general characteristics of embedded systems is an arduous task. In fact, the design of such kind of systems is heavily influenced by functional and non-functional requirements, and it is based on quite complex design flows. So, there is often the need to adopt a HW/SW co-design methodology able to support the designers during high-level phases so that they can perform early analysis before dealing with low-level ones. Such a methodology, to be effective, should consider also performance estimation and ESL HW/SW timing co-simulation. The goal of this paper is to introduce a novel and fast performance metric able to speed-up the early analysis and design space exploration to identify the more promising architectures for different application domains. In particular, the paper presents a framework to evaluate such a metric and to perform some preliminary analysis to evaluate its meaningfulness when exploited in the HW/SW domain.},
+booktitle = {Companion of the 2018 ACM/SPEC International Conference on Performance Engineering},
+pages = {119–122},
+numpages = {4},
+keywords = {system-level metrics, embedded systems, HW/SW co-design},
+location = {Berlin, Germany},
+series = {ICPE '18}
+}
+```
