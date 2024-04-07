@@ -66,6 +66,10 @@ The simulation phase involves the execution of the toolchain of each processor s
 - 8051:
 	- **[sdcc](http://sdcc.sourceforge.net/)** : the cross-compiler for the 8051;
 	- **[isasim](http://www.newit.gsu.by/resources/CPUs/i8051/VHDL/Synthesizeable%20VHDL%20Model%20of%208051.htm)** : the simulator of the 8051;
+ - Thumbulator:
+ - Armulator:
+ - Spike RISC-V ISA Simulator:
+ - Bambu HLS:
 
 ### RELEASE NOTES
 Latest Release: 2.0.0
@@ -87,12 +91,14 @@ For any bug or doubt, contact us or open an issue.
 We currently support:
 
  1. Email: 
-    - Luigi Pomante, luigi.pomante@univaq.it
+    - Luigi Pomante:
+    	- luigi.pomante@univaq.it
     - Vittoriano Muttillo:
        - vittoriano.muttillo@guest.univaq.it,
        - vmuttillo@unite.it
        - vittoriano.muttillo@gmail.com
-    - Vincenzo Stoico, v.stoico@vu.nl
+    - Vincenzo Stoico:
+    	- v.stoico@vu.nl
     - (please take care to use \[SLICE-x SUPPORT\] as object
  2. Issues on GitHub
  
