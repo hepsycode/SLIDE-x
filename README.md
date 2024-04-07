@@ -5,6 +5,12 @@
 <img src="img/logo_NEW.png" width="250" height="250">
 </p>
 
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
+## Installation instructions
+
+### OVERVIEW
+
 # SLIDE-x Main Components:
 1. **SLIDE-x-Bench**: Extensible C-based Benchmark
 2. **SLIDE-x-CORE**:
