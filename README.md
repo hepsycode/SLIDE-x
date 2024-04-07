@@ -36,7 +36,7 @@ SLIDE-x is open-source and freely available on GitHub: https://github.com/hepsyc
 ### SCREENSHOT
 
 <p align="center">
-<img src="img/screen.png" width="800" height="442">
+<img src="img/screen.png" width="700" height="387">
 </p>
 
 ### INSTALLATION
