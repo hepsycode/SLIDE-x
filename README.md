@@ -13,7 +13,7 @@
 ### SLIDE-x Main Components
 SLIDE-x consists of the following components:
 
-1. **SLIDE-x-Bench**: Extensible C-based benchmark component for evaluating HW/SW performance;
+1. **SLIDE-x-BENCH**: Extensible C-based benchmark component for evaluating HW/SW performance;
 2. **SLIDE-x-CORE**: The SLIDE-x core engine component;
    - **SLIDE-x-Data**: Extensible Python Data-driven component, where designers can (semi)automatically generate inputs for the benchmark functions. The function parameters are specified in a JSON file (`cmds.json`) contained in the same directory of the function. The component reads a range `[x; y]` used to generate the values of the parameters and the number of inputs to be created. Finally, for each function, different data types have been considered (i.e., int8, int16, int32, int64, float, and double) to analyze the results for the internal architecture of the considered processor.
    - **SLIDE-x-Code**: Extensible Python Code-driven component, where several code-oriented metrics are extracted by profiling the benchmark functions using the `gcov` and `frama-c` tools for each generated input. It is worth noting that such profiling is performed one-shot on the host platform since it is independent of the target processor technologies.
