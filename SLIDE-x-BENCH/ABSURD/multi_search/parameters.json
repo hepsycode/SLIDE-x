@@ -1,0 +1,12 @@
+{	
+	"args": ["TARGET_INDEX size", "TARGET_TYPE matrix[size][size]","TARGET_INDEX n"],
+	"ALL":
+	{
+		"int8_t":
+		{
+			"size" : "[2,28];32",
+			"n" : "[2,28];32",
+			"matrix[size][size]" : "[-127,127]"
+		}
+	}
+}

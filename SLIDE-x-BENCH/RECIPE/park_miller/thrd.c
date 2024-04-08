@@ -1,0 +1,64 @@
+#include <stdint.h>
+#include <values.h>
+
+typedef int8_t TARGET_TYPE;
+typedef int8_t TARGET_INDEX;
+
+#define IA 16807
+#define IM 2147483647
+#define AM (1.0/IM)
+#define IQ 127773
+#define IR 2836
+#define MASK 123459876
+
+
+TARGET_TYPE my_fmod(TARGET_TYPE a, int b)
+
+{	TARGET_TYPE quot;
+	while(a>0)
+	{
+		quot++;
+		a=a-b;
+	}
+    /*TARGET_TYPE quot = (TARGET_TYPE) a/b;*/
+    return quot;
+}
+TARGET_TYPE mult(TARGET_TYPE a, TARGET_TYPE b)
+
+{	TARGET_TYPE x;
+	while(b>0)
+	{
+		x=x+a;
+		b=b-1;
+	}
+    return x;
+}
+TARGET_TYPE park_miller()
+/*
+“Minimal” random number generator of Park and Miller. Returns a uniform random deviate
+between 0.0 and 1.0. Set or reset idum to any integer value (except the unlikely value MASK )
+to initialize the sequence; idum must not be altered between calls for successive deviates in
+a sequence.
+*/
+
+{
+	TARGET_TYPE k;
+	TARGET_TYPE ans;
+
+	idum ^= MASK;
+	
+	k=my_fmod(idum,IQ);
+	idum = mult(IA , ( idum - k * IQ) - mult(IR , k));
+	if(idum < 0)
+		idum += IM;
+	ans = mult(AM , idum);
+	idum ^= MASK;
+	
+	return ans;
+}
+
+
+void main()
+{
+	park_miller();
+}

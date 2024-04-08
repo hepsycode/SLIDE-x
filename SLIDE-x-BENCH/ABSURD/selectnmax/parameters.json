@@ -1,0 +1,12 @@
+{	
+	"args": ["TARGET_INDEX size", "TARGET_TYPE a[size]","TARGET_INDEX pos"],
+	"ALL":
+	{
+		"int8_t":
+		{
+			"size" : "[2,28];32",
+			"pos" : "[2,28];32",
+			"a[size]" : "[-127,127]"
+		}
+	}
+}
