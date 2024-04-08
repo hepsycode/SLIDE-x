@@ -52,7 +52,7 @@ This step requires the [frama-c](https://frama-c.com/) software analyzer.
 The simulation phase involves the execution of the toolchain for each processor supported by the framework. The following is a description of each supported processor and the tools needed to get the information required to extract HW/SW metrics:
 
 - **Atmel AVR family**: 
-	- **[simulavr](https://www.nongnu.org/simulavr/)**: the instruction set simulator of the Atmega328p;
+	- **[simulavr](https://www.nongnu.org/simulavr/)**: the instruction set simulator of the Atmel AVR family;
 	- **[avr-gcc](https://gcc.gnu.org/wiki/avr-gcc)**: the cross-compiler for the AVR ISA;
 
 - **LEON3**: 
