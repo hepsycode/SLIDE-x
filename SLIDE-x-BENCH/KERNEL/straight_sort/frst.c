@@ -2,8 +2,8 @@
 #include <stdint.h>
 #include <values.h>
 
-typedef float TARGET_TYPE;
-typedef int8_t TARGET_INDEX;
+typedef int16_t TARGET_TYPE;
+typedef uint8_t TARGET_INDEX;
 
 void straight_sort()
 // Sorts an array arr[1..n] into ascending numerical order, by straight insertion. n is input; arr

@@ -47,7 +47,7 @@
 #include <values.h>
 #include <stdio.h>
 
-typedef float TARGET_TYPE;
+typedef double TARGET_TYPE;
 typedef uint8_t TARGET_INDEX;
 
     TARGET_INDEX i;

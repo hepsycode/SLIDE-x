@@ -2,7 +2,7 @@
 #include <8051.h>
 #include <values.h>
 
-typedef float TARGET_TYPE;
+typedef int64_t TARGET_TYPE;
 typedef uint8_t TARGET_INDEX;
 
 void swap(TARGET_INDEX index_1, TARGET_INDEX index_2)
