@@ -258,7 +258,7 @@ class Parser:
     """ This functions extracts the needed information from a FramaC output file
     """
 
-    def getFramaRowOLD(args):
+    def getFramaRowBackup(args):
         filePath, idxStart, idxEnd = args
         content = []
 

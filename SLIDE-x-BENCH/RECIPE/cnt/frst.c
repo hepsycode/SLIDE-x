@@ -5,7 +5,7 @@
 #include <stdint.h>
 #include <values.h>
 
-typedef float TARGET_TYPE;
+typedef double TARGET_TYPE;
 typedef uint8_t TARGET_INDEX;
 
 //void prototype(int8_t size, int8_t a[size][size]);

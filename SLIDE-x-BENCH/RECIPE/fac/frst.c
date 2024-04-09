@@ -1,7 +1,7 @@
 #include <stdint.h>
 #include <values.h>
 
-typedef long TARGET_TYPE;
+typedef int64_t TARGET_TYPE;
 typedef uint8_t TARGET_INDEX;
 
 //void prototype(int8_t n);

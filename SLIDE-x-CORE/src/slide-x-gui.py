@@ -19,8 +19,10 @@ import numpy as np
 configsrc = dirname(realpath(__file__).rsplit("/", 1)[0])
 projectPath = dirname(configsrc) + '/'
 benchmarkFolder = '/SLIDE-x-BENCH/RECIPE/'  # '/benchmark/POLYBENCH/linear-algebra/kernels/'
+
 optFlags = '-O2'
-optNameFolder = 'opt02'
+optNameFolder = 'optO2-00'
+
 matrixFolderName = '28x28'
 
 # TODO: automatic switching between signed and unsigned types
@@ -30,6 +32,9 @@ filess = {'8051': 'scnd.c', 'Leon3': 'frst.c', 'Thumb': 'frst.c', 'Atmega328p': 
 
 targets = ["int8_t", "int16_t", "int32_t", "int64_t", "float", "double"]  # TARGET_TYPE types    # , "float"
 indexes = ["uint8_t", "uint8_t", "uint8_t", "uint8_t", "uint8_t", "uint8_t"]  # TARGET_INDEX types   # , "uint8_t"
+
+# targets = ["int8_t", "int16_t", "int32_t", "int64_t"]  # TARGET_TYPE types    # , "float"
+# indexes = ["uint8_t", "uint8_t", "uint8_t", "uint8_t"]  # TARGET_INDEX types   # , "uint8_t"
 
 # indexTypes = ["int8_t", "int16_t", "int32_t", "long"]
 # indexTypes = ["uint8_t", "uint16_t", "uint32_t", "unsigned long"]
@@ -377,7 +382,7 @@ def calculateMetric(profPath, simPath, outputPath):
 # print("ProjectPath:"+projectPath)
 
 # Start the GUI
-gui = GUI("SLIDE-x GUI", "600x450")  # Start GUI
+gui = GUI("SLIDE-x GUI", "600x450", False)  # Start GUI
 gui.fillMainWindow(projectPath + benchmarkFolder, gui.callback)
 gui.start()
 

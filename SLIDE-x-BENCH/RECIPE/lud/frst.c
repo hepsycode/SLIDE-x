@@ -65,7 +65,7 @@
 
 #define TINY 1.0e-20 // A small number.
 
-typedef float TARGET_TYPE;
+typedef double TARGET_TYPE;
 typedef uint8_t TARGET_INDEX;
 
 	TARGET_INDEX i = 0, imax = 0, j = 0, k = 0;

@@ -8,17 +8,31 @@ def returnDirNames(topDir):
     return [f for f in listdir(topDir) if isdir(join(topDir, f))]
 
 class GUI:
-    def __init__(self, title, dimension):
-        # Main Window
-        self.root = tk.Tk()
-        self.root.title(title)
-        self.root.geometry(dimension)
-        self.root.eval('tk::PlaceWindow . center')
+    def __init__(self, title, dimension, automation):
+        if automation:
+            # Main Window
+            """
+            self.root = tk.Tk()
+            self.root.title(title)
+            self.root.geometry(dimension)
+            self.root.eval('tk::PlaceWindow . center')
+    
+            self.lbox = ""
+            self.rbtn = ""
+            # microprocessors
+            self.micros = ['Leon3', 'Thumb', 'Atmega328p', 'Arm', '8051', 'Bambu', 'RiscV', 'ALL']
+            """
+        else:
+            # Main Window
+            self.root = tk.Tk()
+            self.root.title(title)
+            self.root.geometry(dimension)
+            self.root.eval('tk::PlaceWindow . center')
 
-        self.lbox = ""
-        self.rbtn = ""
-        # microprocessors
-        self.micros = ['Leon3', 'Thumb', 'Atmega328p', 'Arm', '8051', 'Bambu', 'RiscV', 'ALL']
+            self.lbox = ""
+            self.rbtn = ""
+            # microprocessors
+            self.micros = ['Leon3', 'Thumb', 'Atmega328p', 'Arm', '8051', 'Bambu', 'RiscV', 'ALL']
 
     def getmicros(self):
         return ['Thumb', 'Leon3', 'Arm', 'Atmega328p', '8051', 'Bambu', 'RiscV']
@@ -81,7 +95,7 @@ class GUI:
         trdFrame = tk.Frame(self.root, relief=tk.GROOVE, height=10, padx=10, pady=15)
         trdFrame.pack(fill=tk.X)
 
-        button = tk.Button(trdFrame, text="Calculate Metrics",
+        button = tk.Button(trdFrame, text="Extract Metrics",
             command=partial(customCallback, lbox, var, tk.ACTIVE))
 
         button.pack(fill=tk.X)

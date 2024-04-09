@@ -3,7 +3,7 @@
 #include <stdint.h>
 #include <values.h>
 
-typedef float TARGET_TYPE;
+typedef double TARGET_TYPE;
 typedef uint8_t TARGET_INDEX;
 
 /* BUBBLESORT BENCHMARK PROGRAM:

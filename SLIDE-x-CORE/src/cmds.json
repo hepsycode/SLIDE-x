@@ -6,10 +6,11 @@
 
 	"Profiling": {
 		"irdump": "gcc [OptimizationFlag] [functionPath] -fdump-tree-gimple-lineno -fdump-tree-release_ssa-lineno -fdump-tree-optimized-lineno -I[scriptPath] -I[prjPath]includes/ -I[prjPath]includes/[directoryName] -o [functionName] -D _GCOV_EXE_",
-		"compiler": "gcc [OptimizationFlag] [functionPath] -fprofile-arcs -ftest-coverage -fkeep-inline-functions -I[scriptPath] -I[prjPath]includes/ -I[prjPath]includes/[directoryName] -o [functionName]",
+		"irexec": "rm [functionName]",
+		"compiler": "gcc [functionPath] -fprofile-arcs -ftest-coverage -I[scriptPath] -I[prjPath]includes/ -I[prjPath]includes/[directoryName] -o [functionName] -D _GCOV_EXE_",
 		"exec": "[prjPath]files_gcov/[directoryName]/[functionName]",
 		"gcov": "gcov --unconditional-branches --branch-probabilities --branch-counts --function-summaries [functionName].gcda {gcovOutput.txt}",
-		"dependencies": "irdump compiler exec gcov"
+		"dependencies": "irdump irexec compiler exec gcov"
 	},
 
 	"Atmega328p": {
