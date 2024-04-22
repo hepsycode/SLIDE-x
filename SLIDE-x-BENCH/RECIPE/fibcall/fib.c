@@ -50,7 +50,7 @@
 typedef float TARGET_TYPE;
 typedef int8_t TARGET_INDEX;
 
-TARGET_TYPE fib(TARGET_TYPE n)
+TARGET_TYPE fib()
 {
     TARGET_INDEX i;
     TARGET_TYPE Fnew, Fold, temp, ans;
@@ -74,7 +74,7 @@ TARGET_TYPE fib(TARGET_TYPE n)
 
 void main()
 {
-  fib(n);
+  fib();
 }
 
 

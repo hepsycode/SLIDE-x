@@ -26,7 +26,7 @@ static double c[8][8] = {{0.353553, 0.353553, 0.353553, 0.353553, 0.353553, 0.35
 {0.191342, -0.461940, 0.461940, -0.191342, -0.191342, 0.461940, -0.461940, 0.191342},
 {0.097545, -0.277785, 0.415735, -0.490393, 0.490393, -0.415735, 0.277785, -0.097545}}; /* transform coefficients */
 
-void fdct(TARGET_INDEX M, TARGET_TYPE a[M])
+void fdct()
 {
 	  double s;
 	  double tmp[64];
@@ -64,6 +64,6 @@ void fdct(TARGET_INDEX M, TARGET_TYPE a[M])
 
 void main()
 {
-	fdct(M, a);
+	fdct();
 }
 

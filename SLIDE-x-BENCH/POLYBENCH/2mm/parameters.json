@@ -1,0 +1,590 @@
+{
+	"args": ["TARGET_INDEX ni", "TARGET_INDEX nj", "TARGET_INDEX nk", "TARGET_INDEX nl", "TARGET_INDEX alpha", "TARGET_INDEX beta", "TARGET_TYPE A[ni][nk]", "TARGET_TYPE B[nk][nj]",  "TARGET_TYPE C[nl][nj]",  "TARGET_TYPE D[ni][nl]"],
+	
+	"ALL":
+	{
+		"int8_t":{
+			"ni": "[2,32];2",
+			"nj": "[2,32];2",
+			"nk": "[2,32];2",
+			"nl": "[2,32];2",
+			"alpha": "[2,32];2",
+			"beta": "[2,32];2",
+			"A[ni][nk]": "[0,255]",
+			"B[nk][nj]": "[0,255]",
+			"C[nl][nj]": "[0,255]",
+			"D[ni][nl]": "[0,255]"
+		}
+	},
+	
+	"Arm":
+	{
+		"int8_t":{
+			"size": "[2,32];4",
+			"available[size]": "[0,255]",
+			"allocated[size][size]": "[0,255]",
+			"max[size][size]": "[0,255]"
+		},
+
+		"uint8_t":{
+			"size": "[2,32];4",
+			"available[size]": "[0,255]",
+			"allocated[size][size]": "[0,255]",
+			"max[size][size]": "[0,255]"
+		},
+		
+		"int16_t":{
+			"size": "[2,32];4",
+			"available[size]": "[0,3276]",
+			"allocated[size][size]": "[0,65535]",
+			"max[size][size]": "[0,65535]"
+		},
+		
+		"uint16_t":{
+			"size": "[2,32];4",
+			"available[size]": "[0,255]",
+			"allocated[size][size]": "[0,255]",
+			"max[size][size]": "[0,255]"
+		},
+
+		"int32_t":{
+			"size": "[2,32];4",
+			"available[size]": "[0,2147483640]",
+			"allocated[size][size]": "[0,2147483640]",
+			"max[size][size]": "[0,2147483640]"
+		},
+		
+		"uint32_t":{
+			"size": "[2,32];4",
+			"available[size]": "[0,255]",
+			"allocated[size][size]": "[0,255]",
+			"max[size][size]": "[0,255]"
+		},
+		
+		"int64_t":{
+			"size": "[2,32];4",
+			"available[size]": "[0,9223372036854775807]",
+			"allocated[size][size]": "[0,9223372036854775807]",
+			"max[size][size]": "[0,9223372036854775807]"
+		},
+		
+		"uint64_t":{
+			"size": "[2,32];4",
+			"available[size]": "[0,255]",
+			"allocated[size][size]": "[0,255]",
+			"max[size][size]": "[0,255]"
+		},
+
+		"float":{
+			"size": "[2,32];4",
+			"available[size]": "[0,4294967295]",
+			"allocated[size][size]": "[0,4294967295]",
+			"max[size][size]": "[0,4294967295]"
+		},
+		
+		"double":{
+			"size": "[2,32];4",
+			"available[size]": "[0,9223372036854775807]",
+			"allocated[size][size]": "[0,9223372036854775807]",
+			"max[size][size]": "[0,9223372036854775807]"
+		}
+	},
+	
+	"Thumb":
+	{
+		"int8_t":{
+			"size": "[2,32];4",
+			"available[size]": "[0,255]",
+			"allocated[size][size]": "[0,255]",
+			"max[size][size]": "[0,255]"
+		},
+
+		"uint8_t":{
+			"size": "[2,32];4",
+			"available[size]": "[0,255]",
+			"allocated[size][size]": "[0,255]",
+			"max[size][size]": "[0,255]"
+		},
+		
+		"int16_t":{
+			"size": "[2,32];4",
+			"available[size]": "[0,3276]",
+			"allocated[size][size]": "[0,65535]",
+			"max[size][size]": "[0,65535]"
+		},
+		
+		"uint16_t":{
+			"size": "[2,32];4",
+			"available[size]": "[0,255]",
+			"allocated[size][size]": "[0,255]",
+			"max[size][size]": "[0,255]"
+		},
+
+		"int32_t":{
+			"size": "[2,32];4",
+			"available[size]": "[0,2147483640]",
+			"allocated[size][size]": "[0,2147483640]",
+			"max[size][size]": "[0,2147483640]"
+		},
+		
+		"uint32_t":{
+			"size": "[2,32];4",
+			"available[size]": "[0,255]",
+			"allocated[size][size]": "[0,255]",
+			"max[size][size]": "[0,255]"
+		},
+		
+		"int64_t":{
+			"size": "[2,32];4",
+			"available[size]": "[0,9223372036854775807]",
+			"allocated[size][size]": "[0,9223372036854775807]",
+			"max[size][size]": "[0,9223372036854775807]"
+		},
+		
+		"uint64_t":{
+			"size": "[2,32];4",
+			"available[size]": "[0,255]",
+			"allocated[size][size]": "[0,255]",
+			"max[size][size]": "[0,255]"
+		},
+
+		"float":{
+			"size": "[2,32];4",
+			"available[size]": "[0,4294967295]",
+			"allocated[size][size]": "[0,4294967295]",
+			"max[size][size]": "[0,4294967295]"
+		},
+		
+		"double":{
+			"size": "[2,32];4",
+			"available[size]": "[0,9223372036854775807]",
+			"allocated[size][size]": "[0,9223372036854775807]",
+			"max[size][size]": "[0,9223372036854775807]"
+		}
+	},
+	
+	"Bambu":
+	{
+		"int8_t":{
+			"size": "[2,32];4",
+			"available[size]": "[0,255]",
+			"allocated[size][size]": "[0,255]",
+			"max[size][size]": "[0,255]"
+		},
+
+		"uint8_t":{
+			"size": "[2,32];4",
+			"available[size]": "[0,255]",
+			"allocated[size][size]": "[0,255]",
+			"max[size][size]": "[0,255]"
+		},
+		
+		"int16_t":{
+			"size": "[2,32];4",
+			"available[size]": "[0,3276]",
+			"allocated[size][size]": "[0,65535]",
+			"max[size][size]": "[0,65535]"
+		},
+		
+		"uint16_t":{
+			"size": "[2,32];4",
+			"available[size]": "[0,255]",
+			"allocated[size][size]": "[0,255]",
+			"max[size][size]": "[0,255]"
+		},
+
+		"int32_t":{
+			"size": "[2,32];4",
+			"available[size]": "[0,2147483640]",
+			"allocated[size][size]": "[0,2147483640]",
+			"max[size][size]": "[0,2147483640]"
+		},
+		
+		"uint32_t":{
+			"size": "[2,32];4",
+			"available[size]": "[0,255]",
+			"allocated[size][size]": "[0,255]",
+			"max[size][size]": "[0,255]"
+		},
+		
+		"int64_t":{
+			"size": "[2,32];4",
+			"available[size]": "[0,9223372036854775807]",
+			"allocated[size][size]": "[0,9223372036854775807]",
+			"max[size][size]": "[0,9223372036854775807]"
+		},
+		
+		"uint64_t":{
+			"size": "[2,32];4",
+			"available[size]": "[0,255]",
+			"allocated[size][size]": "[0,255]",
+			"max[size][size]": "[0,255]"
+		},
+
+		"float":{
+			"size": "[2,32];4",
+			"available[size]": "[0,4294967295]",
+			"allocated[size][size]": "[0,4294967295]",
+			"max[size][size]": "[0,4294967295]"
+		},
+		
+		"double":{
+			"size": "[2,32];4",
+			"available[size]": "[0,9223372036854775807]",
+			"allocated[size][size]": "[0,9223372036854775807]",
+			"max[size][size]": "[0,9223372036854775807]"
+		}
+	},
+	
+	"Atmega328p":
+	{
+		"int8_t":{
+			"size": "[2,25];4",
+			"available[size]": "[0,255]",
+			"allocated[size][size]": "[0,255]",
+			"max[size][size]": "[0,255]"
+		},
+
+		"uint8_t":{
+			"size": "[2,25];4",
+			"available[size]": "[0,255]",
+			"allocated[size][size]": "[0,255]",
+			"max[size][size]": "[0,255]"
+		},
+		
+		"int16_t":{
+			"size": "[2,32];4",
+			"available[size]": "[0,3276]",
+			"allocated[size][size]": "[0,65535]",
+			"max[size][size]": "[0,65535]"
+		},
+		
+		"uint16_t":{
+			"size": "[2,18];4",
+			"available[size]": "[0,255]",
+			"allocated[size][size]": "[0,255]",
+			"max[size][size]": "[0,255]"
+		},
+
+		"int32_t":{
+			"size": "[2,32];4",
+			"available[size]": "[0,2147483640]",
+			"allocated[size][size]": "[0,2147483640]",
+			"max[size][size]": "[0,2147483640]"
+		},
+		
+		"uint32_t":{
+			"size": "[2,14];4",
+			"available[size]": "[0,2147483640]",
+			"allocated[size][size]": "[0,2147483640]",
+			"max[size][size]": "[0,2147483640]"
+		},
+		
+		"int64_t":{
+			"size": "[2,32];4",
+			"available[size]": "[0,9223372036854775807]",
+			"allocated[size][size]": "[0,9223372036854775807]",
+			"max[size][size]": "[0,9223372036854775807]"
+		},
+		
+		"uint64_t":{
+			"size": "[2,10];4",
+			"available[size]": "[0,9223372036854775807]",
+			"allocated[size][size]": "[0,9223372036854775807]",
+			"max[size][size]": "[0,9223372036854775807]"
+		},
+
+		"float":{
+			"size": "[2,32];4",
+			"available[size]": "[0,4294967295]",
+			"allocated[size][size]": "[0,4294967295]",
+			"max[size][size]": "[0,4294967295]"
+		},
+		
+		"double":{
+			"size": "[2,32];4",
+			"available[size]": "[0,9223372036854775807]",
+			"allocated[size][size]": "[0,9223372036854775807]",
+			"max[size][size]": "[0,9223372036854775807]"
+		}
+	},
+	
+	"8051":
+	{
+		"int8_t":{
+			"size": "[2,32];4",
+			"available[size]": "[0,255]",
+			"allocated[size][size]": "[0,255]",
+			"max[size][size]": "[0,255]"
+		},
+
+		"uint8_t":{
+			"size": "[2,32];4",
+			"available[size]": "[0,255]",
+			"allocated[size][size]": "[0,255]",
+			"max[size][size]": "[0,255]"
+		},
+		
+		"int16_t":{
+			"size": "[2,32];4",
+			"available[size]": "[0,3276]",
+			"allocated[size][size]": "[0,65535]",
+			"max[size][size]": "[0,65535]"
+		},
+		
+		"uint16_t":{
+			"size": "[2,32];4",
+			"available[size]": "[0,255]",
+			"allocated[size][size]": "[0,255]",
+			"max[size][size]": "[0,255]"
+		},
+
+		"int32_t":{
+			"size": "[2,32];4",
+			"available[size]": "[0,2147483640]",
+			"allocated[size][size]": "[0,2147483640]",
+			"max[size][size]": "[0,2147483640]"
+		},
+		
+		"uint32_t":{
+			"size": "[2,32];4",
+			"available[size]": "[0,255]",
+			"allocated[size][size]": "[0,255]",
+			"max[size][size]": "[0,255]"
+		},
+		
+		"int64_t":{
+			"size": "[2,32];4",
+			"available[size]": "[0,9223372036854775807]",
+			"allocated[size][size]": "[0,9223372036854775807]",
+			"max[size][size]": "[0,9223372036854775807]"
+		},
+		
+		"uint64_t":{
+			"size": "[2,32];4",
+			"available[size]": "[0,255]",
+			"allocated[size][size]": "[0,255]",
+			"max[size][size]": "[0,255]"
+		},
+
+		"float":{
+			"size": "[2,32];4",
+			"available[size]": "[0,4294967295]",
+			"allocated[size][size]": "[0,4294967295]",
+			"max[size][size]": "[0,4294967295]"
+		},
+		
+		"double":{
+			"size": "[2,32];4",
+			"available[size]": "[0,9223372036854775807]",
+			"allocated[size][size]": "[0,9223372036854775807]",
+			"max[size][size]": "[0,9223372036854775807]"
+		}
+	},
+	
+	"Leon3":
+	{
+		"int8_t":{
+			"ni": "[2,32];2",
+			"nj": "[2,32];2",
+			"nk": "[2,32];2",
+			"nl": "[2,32];2",
+			"alpha": "[2,32];2",
+			"beta": "[2,32];2",
+			"A[ni][nk]": "[0,255]",
+			"B[nk][nj]": "[0,255]",
+			"C[nl][nj]": "[0,255]",
+			"D[ni][nl]": "[0,255]"
+		},
+
+		"uint8_t":{
+			"ni": "[2,32];2",
+			"nj": "[2,32];2",
+			"nk": "[2,32];2",
+			"nl": "[2,32];2",
+			"alpha": "[2,32];2",
+			"beta": "[2,32];2",
+			"A[ni][nk]": "[0,255]",
+			"B[nk][nj]": "[0,255]",
+			"C[nl][nj]": "[0,255]",
+			"D[ni][nl]": "[0,255]"
+		},
+		
+		"int16_t":{
+			"ni": "[2,32];2",
+			"nj": "[2,32];2",
+			"nk": "[2,32];2",
+			"nl": "[2,32];2",
+			"alpha": "[2,32];2",
+			"beta": "[2,32];2",
+			"A[ni][nk]": "[0,255]",
+			"B[nk][nj]": "[0,255]",
+			"C[nl][nj]": "[0,255]",
+			"D[ni][nl]": "[0,255]"
+		},
+		
+		"uint16_t":{
+			"ni": "[2,32];2",
+			"nj": "[2,32];2",
+			"nk": "[2,32];2",
+			"nl": "[2,32];2",
+			"alpha": "[2,32];2",
+			"beta": "[2,32];2",
+			"A[ni][nk]": "[0,255]",
+			"B[nk][nj]": "[0,255]",
+			"C[nl][nj]": "[0,255]",
+			"D[ni][nl]": "[0,255]"
+		},
+
+		"int32_t":{
+			"ni": "[2,32];2",
+			"nj": "[2,32];2",
+			"nk": "[2,32];2",
+			"nl": "[2,32];2",
+			"alpha": "[2,32];2",
+			"beta": "[2,32];2",
+			"A[ni][nk]": "[0,255]",
+			"B[nk][nj]": "[0,255]",
+			"C[nl][nj]": "[0,255]",
+			"D[ni][nl]": "[0,255]"
+		},
+		
+		"uint32_t":{
+			"ni": "[2,32];2",
+			"nj": "[2,32];2",
+			"nk": "[2,32];2",
+			"nl": "[2,32];2",
+			"alpha": "[2,32];2",
+			"beta": "[2,32];2",
+			"A[ni][nk]": "[0,255]",
+			"B[nk][nj]": "[0,255]",
+			"C[nl][nj]": "[0,255]",
+			"D[ni][nl]": "[0,255]"
+		},
+		
+		"int64_t":{
+			"ni": "[2,32];2",
+			"nj": "[2,32];2",
+			"nk": "[2,32];2",
+			"nl": "[2,32];2",
+			"alpha": "[2,32];2",
+			"beta": "[2,32];2",
+			"A[ni][nk]": "[0,255]",
+			"B[nk][nj]": "[0,255]",
+			"C[nl][nj]": "[0,255]",
+			"D[ni][nl]": "[0,255]"
+		},
+		
+		"uint64_t":{
+			"ni": "[2,32];2",
+			"nj": "[2,32];2",
+			"nk": "[2,32];2",
+			"nl": "[2,32];2",
+			"alpha": "[2,32];2",
+			"beta": "[2,32];2",
+			"A[ni][nk]": "[0,255]",
+			"B[nk][nj]": "[0,255]",
+			"C[nl][nj]": "[0,255]",
+			"D[ni][nl]": "[0,255]"
+		},
+
+		"float":{
+			"ni": "[2,32];2",
+			"nj": "[2,32];2",
+			"nk": "[2,32];2",
+			"nl": "[2,32];2",
+			"alpha": "[2,32];2",
+			"beta": "[2,32];2",
+			"A[ni][nk]": "[0,255]",
+			"B[nk][nj]": "[0,255]",
+			"C[nl][nj]": "[0,255]",
+			"D[ni][nl]": "[0,255]"
+		},
+		
+		"double":{
+			"ni": "[2,32];2",
+			"nj": "[2,32];2",
+			"nk": "[2,32];2",
+			"nl": "[2,32];2",
+			"alpha": "[2,32];2",
+			"beta": "[2,32];2",
+			"A[ni][nk]": "[0,255]",
+			"B[nk][nj]": "[0,255]",
+			"C[nl][nj]": "[0,255]",
+			"D[ni][nl]": "[0,255]"
+		}
+	},
+	
+	"RiscV":
+	{
+		"int8_t":{
+			"size": "[2,32];4",
+			"available[size]": "[0,255]",
+			"allocated[size][size]": "[0,255]",
+			"max[size][size]": "[0,255]"
+		},
+
+		"uint8_t":{
+			"size": "[2,32];4",
+			"available[size]": "[0,255]",
+			"allocated[size][size]": "[0,255]",
+			"max[size][size]": "[0,255]"
+		},
+		
+		"int16_t":{
+			"size": "[2,32];4",
+			"available[size]": "[0,3276]",
+			"allocated[size][size]": "[0,65535]",
+			"max[size][size]": "[0,65535]"
+		},
+		
+		"uint16_t":{
+			"size": "[2,32];4",
+			"available[size]": "[0,255]",
+			"allocated[size][size]": "[0,255]",
+			"max[size][size]": "[0,255]"
+		},
+
+		"int32_t":{
+			"size": "[2,32];4",
+			"available[size]": "[0,2147483640]",
+			"allocated[size][size]": "[0,2147483640]",
+			"max[size][size]": "[0,2147483640]"
+		},
+		
+		"uint32_t":{
+			"size": "[2,32];4",
+			"available[size]": "[0,255]",
+			"allocated[size][size]": "[0,255]",
+			"max[size][size]": "[0,255]"
+		},
+		
+		"int64_t":{
+			"size": "[2,32];4",
+			"available[size]": "[0,9223372036854775807]",
+			"allocated[size][size]": "[0,9223372036854775807]",
+			"max[size][size]": "[0,9223372036854775807]"
+		},
+		
+		"uint64_t":{
+			"size": "[2,32];4",
+			"available[size]": "[0,255]",
+			"allocated[size][size]": "[0,255]",
+			"max[size][size]": "[0,255]"
+		},
+
+		"float":{
+			"size": "[2,32];4",
+			"available[size]": "[0,4294967295]",
+			"allocated[size][size]": "[0,4294967295]",
+			"max[size][size]": "[0,4294967295]"
+		},
+		
+		"double":{
+			"size": "[2,32];4",
+			"available[size]": "[0,9223372036854775807]",
+			"allocated[size][size]": "[0,9223372036854775807]",
+			"max[size][size]": "[0,9223372036854775807]"
+		}
+	}	
+}

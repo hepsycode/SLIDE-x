@@ -18,7 +18,7 @@
           "compiler": "avr-gcc [OptimizationFlag] [functionPath] -g -mmcu=atmega328 -I[prjPath]includes/[directoryName] -o [functionName]",
           "dependencies": "compiler iss size",
           "size": "size [prjPath]/files/[directoryName]/[functionName] {size.txt}"
-     	},
+	},
 
 	"Leon3": {
 		"additionalFile": "cp [scriptPath]/src/tsim_cmd [prjPath]includes/",
@@ -39,7 +39,7 @@
 	"Thumb": {
 		"vectors": "arm-none-eabi-as [functionDir]/vectors.s -o [functionDir]/vectors.o",
 		"compiler": "arm-none-eabi-gcc --specs=nosys.specs [OptimizationFlag] -mthumb -mfloat-abi=soft -msoft-float -fno-builtin -mfpu=auto -c -I[prjPath]includes/[directoryName] -o [functionName].o [functionPath]",
-		"linking": "arm-none-eabi-ld -nostdlib -L/usr/lib/gcc/arm-none-eabi/10.3.1/libgcc.a -T [functionDir]/memmap [functionDir]/vectors.o [functionName].o -o [functionName].elf",
+		"linking": "arm-none-eabi-ld -nostdlib -L/usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp -T [functionDir]/memmap [functionDir]/vectors.o [functionName].o -lgcc -o [functionName].elf",
 		"binary": "arm-none-eabi-objcopy -O binary [functionName].elf [functionName].bin",
 		"iss": "thumbulator [functionName].bin {[functionName].txt}",
 		"size": "size [prjPath]/files/[directoryName]/[functionName].o {size.txt}",
@@ -47,8 +47,8 @@
 	},
 
 	"Arm": {
-		"compiler": "arm-none-eabi-gcc [OptimizationFlag] -march=armv4t -mfloat-abi=soft -nostdlib -fno-builtin -msoft-float -mfpu=auto -c [functionPath] -I[prjPath]includes/[directoryName] -o [functionDir]/[functionName].o",
-		"linking": "arm-none-eabi-ld -L/usr/lib/arm-none-eabi/lib/arm/v5te/softfp/libm.a [functionDir]/startup.o [functionDir]/[functionName].o -o [functionDir]/[functionName].elf -T [functionDir]/arm-memmap.ld",
+		"compiler": "arm-none-eabi-gcc [OptimizationFlag] -nostartfiles -ffreestanding -march=armv4t -mfloat-abi=soft -nostdlib -fno-builtin -msoft-float -mfpu=auto -c [functionPath] -I[prjPath]includes/[directoryName] -o [functionDir]/[functionName].o",
+		"linking": "arm-none-eabi-ld -L/usr/lib/gcc/arm-none-eabi/10.3.1/thumb/nofp [functionDir]/startup.o [functionDir]/[functionName].o -lgcc -o [functionDir]/[functionName].elf -T [functionDir]/arm-memmap.ld",
 		"startup":"arm-none-eabi-as [functionDir]/startup.s -o [functionDir]/startup.o",
 		"binary":"[functionDir]/rip [functionDir]/[functionName].elf",
 		"iss":"armulator [functionDir]/00000000.bin {[functionName].txt}",
@@ -70,7 +70,7 @@
 
 	"FramaC": {
 		"mccabe": "frama-c -metrics -metrics-value-cover -cpp-extra-args='-I[prjPath]includes/' -cpp-extra-args='-I[prjPath]includes/[directoryName]' -cpp-extra-args='-I[scriptPath]' [functionPath] {McCabe.txt}",
-		"halsted": "frama-c -metrics -metrics-ast cabs -cpp-extra-args='-I[prjPath]includes/' -cpp-extra-args='-I[prjPath]includes/[directoryName]' -cpp-extra-args='-I[scriptPath]' [functionPath] {Halsted.txt}",
+		"halsted": "frama-c -metrics -metrics-ast cabs -kernel-msg-key pp -cpp-extra-args='-I[prjPath]includes/' -cpp-extra-args='-I[prjPath]includes/[directoryName]' -cpp-extra-args='-I[scriptPath]' [functionPath] {Halsted.txt}",
 		"dependencies": "mccabe halsted"
 	}
 }

@@ -30,7 +30,7 @@ hang:   b .
 .thumb_func
 .global _start
 _start:
-    bl shell_sort 
+    bl sqrtfnc 
     swi 1
     @ldr r0,=0xF0000000 ;@ halt
     @str r0,[r0]

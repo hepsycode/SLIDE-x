@@ -48,7 +48,7 @@
 #include <stdint.h>
 #include <values.h>
 
-typedef float TARGET_TYPE;
+typedef int64_t TARGET_TYPE;
 typedef uint8_t TARGET_INDEX;
 
 #define SWAP(a,b) tempr=(a);(a)=(b);(b)=tempr
@@ -117,7 +117,7 @@ TARGET_TYPE mysin(TARGET_TYPE rad)
 }
 
 
-void fft(TARGET_TYPE nn, TARGET_INDEX size, TARGET_TYPE data[size], TARGET_INDEX isign)
+void fft()
 {
 	TARGET_INDEX n,mmax,m,j,istep,i;
 	TARGET_TYPE wtemp,wr,wpr,wpi,wi,theta;
@@ -188,5 +188,5 @@ void fft(TARGET_TYPE nn, TARGET_INDEX size, TARGET_TYPE data[size], TARGET_INDEX
 
 void main()
 {
-  fft(nn, size, data, isign);
+  fft();
 }

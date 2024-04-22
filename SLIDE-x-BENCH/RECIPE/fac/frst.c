@@ -1,7 +1,7 @@
 #include <stdint.h>
 #include <values.h>
 
-typedef float TARGET_TYPE;
+typedef int64_t TARGET_TYPE;
 typedef uint8_t TARGET_INDEX;
 
 //void prototype(int8_t n);
@@ -17,7 +17,7 @@ TARGET_TYPE fac1 (TARGET_TYPE n)
      return (n * fac1 (n-1));
 }
 
-void fac(TARGET_TYPE n)
+void fac()
 {
   // n = 5;
   for (i = 0;  i <= n; i++)
@@ -26,5 +26,5 @@ void fac(TARGET_TYPE n)
 
 void main()
 {
-	fac(n);
+	fac();
 }

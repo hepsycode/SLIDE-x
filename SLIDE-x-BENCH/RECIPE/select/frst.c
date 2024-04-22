@@ -10,7 +10,7 @@ typedef uint8_t TARGET_INDEX;
 
 #define SWAP(a,b) temp=(a);(a)=(b);(b)=temp;
 
-TARGET_TYPE select(TARGET_INDEX k, TARGET_INDEX size, TARGET_TYPE arr[size])
+TARGET_TYPE select()
 /*
 Returns the k th smallest value in the array arr[1..n] . The input array will be rearranged
 to have this value in location arr[k] , with all smaller elements moved to arr[1..k-1] (in
@@ -86,6 +86,6 @@ arbitrary order) and all larger elements in arr[k+1..n] (also in arbitrary order
 
 void main()
 {
-  select(k, size, arr);
+  select();
 }
 

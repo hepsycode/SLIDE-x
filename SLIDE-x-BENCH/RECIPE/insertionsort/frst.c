@@ -5,7 +5,7 @@
 typedef double TARGET_TYPE;
 typedef uint8_t TARGET_INDEX;
 
-void insertionsort(TARGET_INDEX size, TARGET_TYPE a[size])
+void insertionsort()
 {
     TARGET_INDEX i = 0;
     TARGET_TYPE temp;
@@ -29,5 +29,5 @@ void insertionsort(TARGET_INDEX size, TARGET_TYPE a[size])
 
 void main()
 {
-    insertionsort(size, a);
+    insertionsort();
 }

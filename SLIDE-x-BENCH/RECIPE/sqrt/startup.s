@@ -12,5 +12,5 @@ _Reset:
  
 Reset_Handler:
   LDR sp, =stack_top
-  BL shell_sort
+  BL sqrtfnc
   B .

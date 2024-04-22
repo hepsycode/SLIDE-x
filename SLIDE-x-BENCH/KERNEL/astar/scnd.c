@@ -2,8 +2,8 @@
 #include <8051.h>
 #include <values.h>
 
-typedef float TARGET_TYPE;
-typedef uint8_t TARGET_INDEX;
+typedef int16_t TARGET_TYPE;
+typedef uint16_t TARGET_INDEX;
 
 //void prototype(int8_t size, int8_t a[size][size], int8_t goal);
 

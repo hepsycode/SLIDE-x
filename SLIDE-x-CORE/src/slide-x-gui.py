@@ -18,20 +18,20 @@ import numpy as np
 # Absolute path of the directory containing the configuration files 
 configsrc = dirname(realpath(__file__).rsplit("/", 1)[0])
 projectPath = dirname(configsrc) + '/'
-benchmarkFolder = '/SLIDE-x-BENCH/RECIPE/'  # '/benchmark/POLYBENCH/linear-algebra/kernels/'
+benchmarkFolder = '/SLIDE-x-BENCH/POLYBENCH/'  # '/benchmark/POLYBENCH/linear-algebra/kernels/'  KERNEL
 
 optFlags = '-O2'
 optNameFolder = 'optO2-00'
 
-matrixFolderName = '28x28'
+matrixFolderName = '32x32'
 
 # TODO: automatic switching between signed and unsigned types
 # Global Variables
 filess = {'8051': 'scnd.c', 'Leon3': 'frst.c', 'Thumb': 'frst.c', 'Atmega328p': 'frst.c', 'Arm': 'frst.c',
           'Bambu': 'frst.c', 'RiscV': 'frst.c', 'ALL': 'frst.c'}
 
-targets = ["int8_t", "int16_t", "int32_t", "int64_t", "float", "double"]  # TARGET_TYPE types    # , "float"
-indexes = ["uint8_t", "uint8_t", "uint8_t", "uint8_t", "uint8_t", "uint8_t"]  # TARGET_INDEX types   # , "uint8_t"
+targets = ["int8_t", "int16_t", "int32_t", "int64_t", "float", "double"]  # TARGET_TYPE types    # "int32_t", "float"
+indexes = ["uint8_t", "uint16_t", "uint32_t", "uint64_t", "uint32_t", "uint64_t"]  # TARGET_INDEX types   # "uint8_t", "uint16_t", "uint32_t", "uint64_t", "uint32_t", "uint64_t"
 
 # targets = ["int8_t", "int16_t", "int32_t", "int64_t"]  # TARGET_TYPE types    # , "float"
 # indexes = ["uint8_t", "uint8_t", "uint8_t", "uint8_t"]  # TARGET_INDEX types   # , "uint8_t"

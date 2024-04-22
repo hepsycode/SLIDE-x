@@ -1,21 +1,19 @@
 #include <stdint.h>
 #include <values.h>
 
-typedef double TARGET_TYPE;
-typedef uint8_t TARGET_INDEX;
+typedef int64_t TARGET_TYPE;
+typedef uint64_t TARGET_INDEX;
 
-#ifndef RES
-#define RES
 TARGET_TYPE res[size][size];
-#endif
-
-	TARGET_INDEX i, j, k, tot = 0; 
+TARGET_INDEX i, j, k; 
+TARGET_TYPE tot = 0;
 
 void matrix_mul()
 {
 	/* 
 	 * If the number of columns of A is different from the b's rows number then 
 	 * the multiplication can't be done 
+	 */
 	 
 	/* Iterates through the rows of A */
 	for(i = 0; i < size; i++)

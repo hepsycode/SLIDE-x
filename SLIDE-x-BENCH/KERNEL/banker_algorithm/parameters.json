@@ -1,9 +1,10 @@
 {
 	"args": ["TARGET_INDEX size", "TARGET_TYPE available[size]", "TARGET_TYPE allocated[size][size]", "TARGET_TYPE max[size][size]"],
+	
 	"ALL":
 	{
 		"int8_t":{
-			"size": "[2,28];1000",
+			"size": "[2,32];100",
 			"available[size]": "[0,255]",
 			"allocated[size][size]": "[0,255]",
 			"max[size][size]": "[0,255]"
@@ -13,231 +14,511 @@
 	"Arm":
 	{
 		"int8_t":{
-			"size": "[2,28];4",
+			"size": "[2,32];100",
 			"available[size]": "[0,255]",
 			"allocated[size][size]": "[0,255]",
 			"max[size][size]": "[0,255]"
 		},
 
+		"uint8_t":{
+			"size": "[2,32];100",
+			"available[size]": "[0,255]",
+			"allocated[size][size]": "[0,255]",
+			"max[size][size]": "[0,255]"
+		},
 		
-	
 		"int16_t":{
-			"size": "[2,28];4",
+			"size": "[2,32];100",
 			"available[size]": "[0,3276]",
 			"allocated[size][size]": "[0,65535]",
 			"max[size][size]": "[0,65535]"
 		},
+		
+		"uint16_t":{
+			"size": "[2,32];100",
+			"available[size]": "[0,255]",
+			"allocated[size][size]": "[0,255]",
+			"max[size][size]": "[0,255]"
+		},
 
 		"int32_t":{
-			"size": "[2,28];4",
+			"size": "[2,32];100",
+			"available[size]": "[0,2147483640]",
+			"allocated[size][size]": "[0,2147483640]",
+			"max[size][size]": "[0,2147483640]"
+		},
+		
+		"uint32_t":{
+			"size": "[2,32];100",
+			"available[size]": "[0,255]",
+			"allocated[size][size]": "[0,255]",
+			"max[size][size]": "[0,255]"
+		},
+		
+		"int64_t":{
+			"size": "[2,32];100",
+			"available[size]": "[0,9223372036854775807]",
+			"allocated[size][size]": "[0,9223372036854775807]",
+			"max[size][size]": "[0,9223372036854775807]"
+		},
+		
+		"uint64_t":{
+			"size": "[2,32];100",
+			"available[size]": "[0,255]",
+			"allocated[size][size]": "[0,255]",
+			"max[size][size]": "[0,255]"
+		},
+
+		"float":{
+			"size": "[2,32];100",
 			"available[size]": "[0,4294967295]",
 			"allocated[size][size]": "[0,4294967295]",
 			"max[size][size]": "[0,4294967295]"
 		},
 		
-		"long":{
-			"size": "[2,28];4",
-			"available[size]": "[0,4294967295]",
-			"allocated[size][size]": "[0,4294967295]",
-			"max[size][size]": "[0,4294967295]"
-		},
-
-		"float":{
-			"size": "[2,28];4",
-			"available[size]": "[0,4294967295]",
-			"allocated[size][size]": "[0,4294967295]",
-			"max[size][size]": "[0,4294967295]"
+		"double":{
+			"size": "[2,32];100",
+			"available[size]": "[0,9223372036854775807]",
+			"allocated[size][size]": "[0,9223372036854775807]",
+			"max[size][size]": "[0,9223372036854775807]"
 		}
 	},
 	
 	"Thumb":
 	{
 		"int8_t":{
-			"size": "[2,28];4",
+			"size": "[2,32];100",
 			"available[size]": "[0,255]",
 			"allocated[size][size]": "[0,255]",
 			"max[size][size]": "[0,255]"
 		},
 
+		"uint8_t":{
+			"size": "[2,32];100",
+			"available[size]": "[0,255]",
+			"allocated[size][size]": "[0,255]",
+			"max[size][size]": "[0,255]"
+		},
+		
 		"int16_t":{
-			"size": "[2,28];4",
+			"size": "[2,32];100",
 			"available[size]": "[0,3276]",
 			"allocated[size][size]": "[0,65535]",
 			"max[size][size]": "[0,65535]"
 		},
-
-		"int32_t":{
-			"size": "[2,28];4",
-			"available[size]": "[0,4294967295]",
-			"allocated[size][size]": "[0,4294967295]",
-			"max[size][size]": "[0,4294967295]"
+		
+		"uint16_t":{
+			"size": "[2,32];100",
+			"available[size]": "[0,255]",
+			"allocated[size][size]": "[0,255]",
+			"max[size][size]": "[0,255]"
 		},
 
-		"long":{
-			"size": "[2,28];4",
-			"available[size]": "[0,4294967295]",
-			"allocated[size][size]": "[0,4294967295]",
-			"max[size][size]": "[0,4294967295]"
+		"int32_t":{
+			"size": "[2,32];100",
+			"available[size]": "[0,2147483640]",
+			"allocated[size][size]": "[0,2147483640]",
+			"max[size][size]": "[0,2147483640]"
+		},
+		
+		"uint32_t":{
+			"size": "[2,32];100",
+			"available[size]": "[0,255]",
+			"allocated[size][size]": "[0,255]",
+			"max[size][size]": "[0,255]"
+		},
+		
+		"int64_t":{
+			"size": "[2,32];100",
+			"available[size]": "[0,9223372036854775807]",
+			"allocated[size][size]": "[0,9223372036854775807]",
+			"max[size][size]": "[0,9223372036854775807]"
+		},
+		
+		"uint64_t":{
+			"size": "[2,32];100",
+			"available[size]": "[0,255]",
+			"allocated[size][size]": "[0,255]",
+			"max[size][size]": "[0,255]"
 		},
 
 		"float":{
-			"size": "[2,28];4",
+			"size": "[2,32];100",
 			"available[size]": "[0,4294967295]",
 			"allocated[size][size]": "[0,4294967295]",
 			"max[size][size]": "[0,4294967295]"
+		},
+		
+		"double":{
+			"size": "[2,32];100",
+			"available[size]": "[0,9223372036854775807]",
+			"allocated[size][size]": "[0,9223372036854775807]",
+			"max[size][size]": "[0,9223372036854775807]"
 		}
 	},
 	
 	"Bambu":
 	{
 		"int8_t":{
-			"size": "[2,28];4",
+			"size": "[2,32];100",
 			"available[size]": "[0,255]",
 			"allocated[size][size]": "[0,255]",
 			"max[size][size]": "[0,255]"
 		},
-	
+
+		"uint8_t":{
+			"size": "[2,32];100",
+			"available[size]": "[0,255]",
+			"allocated[size][size]": "[0,255]",
+			"max[size][size]": "[0,255]"
+		},
+		
 		"int16_t":{
-			"size": "[2,28];4",
+			"size": "[2,32];100",
 			"available[size]": "[0,3276]",
 			"allocated[size][size]": "[0,65535]",
 			"max[size][size]": "[0,65535]"
 		},
+		
+		"uint16_t":{
+			"size": "[2,32];100",
+			"available[size]": "[0,255]",
+			"allocated[size][size]": "[0,255]",
+			"max[size][size]": "[0,255]"
+		},
 
 		"int32_t":{
-			"size": "[2,28];4",
+			"size": "[2,32];100",
+			"available[size]": "[0,2147483640]",
+			"allocated[size][size]": "[0,2147483640]",
+			"max[size][size]": "[0,2147483640]"
+		},
+		
+		"uint32_t":{
+			"size": "[2,32];100",
+			"available[size]": "[0,255]",
+			"allocated[size][size]": "[0,255]",
+			"max[size][size]": "[0,255]"
+		},
+		
+		"int64_t":{
+			"size": "[2,32];100",
+			"available[size]": "[0,9223372036854775807]",
+			"allocated[size][size]": "[0,9223372036854775807]",
+			"max[size][size]": "[0,9223372036854775807]"
+		},
+		
+		"uint64_t":{
+			"size": "[2,32];100",
+			"available[size]": "[0,255]",
+			"allocated[size][size]": "[0,255]",
+			"max[size][size]": "[0,255]"
+		},
+
+		"float":{
+			"size": "[2,32];100",
 			"available[size]": "[0,4294967295]",
 			"allocated[size][size]": "[0,4294967295]",
 			"max[size][size]": "[0,4294967295]"
 		},
 		
-		"long":{
-			"size": "[2,28];4",
-			"available[size]": "[0,4294967295]",
-			"allocated[size][size]": "[0,4294967295]",
-			"max[size][size]": "[0,4294967295]"
-		},
-
-		"float":{
-			"size": "[2,28];4",
-			"available[size]": "[0,4294967295]",
-			"allocated[size][size]": "[0,4294967295]",
-			"max[size][size]": "[0,4294967295]"
+		"double":{
+			"size": "[2,32];100",
+			"available[size]": "[0,9223372036854775807]",
+			"allocated[size][size]": "[0,9223372036854775807]",
+			"max[size][size]": "[0,9223372036854775807]"
 		}
 	},
 	
 	"Atmega328p":
 	{
 		"int8_t":{
-			"size": "[2,28];4",
+			"size": "[2,25];100",
 			"available[size]": "[0,255]",
 			"allocated[size][size]": "[0,255]",
 			"max[size][size]": "[0,255]"
 		},
-	
+
+		"uint8_t":{
+			"size": "[2,25];100",
+			"available[size]": "[0,255]",
+			"allocated[size][size]": "[0,255]",
+			"max[size][size]": "[0,255]"
+		},
+		
 		"int16_t":{
-			"size": "[2,28];4",
+			"size": "[2,32];100",
 			"available[size]": "[0,3276]",
 			"allocated[size][size]": "[0,65535]",
 			"max[size][size]": "[0,65535]"
 		},
-
-		"int32_t":{
-			"size": "[2,28];4",
-			"available[size]": "[0,4294967295]",
-			"allocated[size][size]": "[0,4294967295]",
-			"max[size][size]": "[0,4294967295]"
+		
+		"uint16_t":{
+			"size": "[2,18];100",
+			"available[size]": "[0,255]",
+			"allocated[size][size]": "[0,255]",
+			"max[size][size]": "[0,255]"
 		},
 
-		"long":{
-			"size": "[2,28];4",
-			"available[size]": "[0,4294967295]",
-			"allocated[size][size]": "[0,4294967295]",
-			"max[size][size]": "[0,4294967295]"
+		"int32_t":{
+			"size": "[2,32];100",
+			"available[size]": "[0,2147483640]",
+			"allocated[size][size]": "[0,2147483640]",
+			"max[size][size]": "[0,2147483640]"
+		},
+		
+		"uint32_t":{
+			"size": "[2,14];100",
+			"available[size]": "[0,2147483640]",
+			"allocated[size][size]": "[0,2147483640]",
+			"max[size][size]": "[0,2147483640]"
+		},
+		
+		"int64_t":{
+			"size": "[2,32];100",
+			"available[size]": "[0,9223372036854775807]",
+			"allocated[size][size]": "[0,9223372036854775807]",
+			"max[size][size]": "[0,9223372036854775807]"
+		},
+		
+		"uint64_t":{
+			"size": "[2,10];100",
+			"available[size]": "[0,9223372036854775807]",
+			"allocated[size][size]": "[0,9223372036854775807]",
+			"max[size][size]": "[0,9223372036854775807]"
 		},
 
 		"float":{
-			"size": "[2,28];4",
+			"size": "[2,32];100",
 			"available[size]": "[0,4294967295]",
 			"allocated[size][size]": "[0,4294967295]",
 			"max[size][size]": "[0,4294967295]"
+		},
+		
+		"double":{
+			"size": "[2,32];100",
+			"available[size]": "[0,9223372036854775807]",
+			"allocated[size][size]": "[0,9223372036854775807]",
+			"max[size][size]": "[0,9223372036854775807]"
 		}
 	},
 	
 	"8051":
 	{
 		"int8_t":{
-			"size": "[2,28];4",
+			"size": "[2,32];100",
 			"available[size]": "[0,255]",
 			"allocated[size][size]": "[0,255]",
 			"max[size][size]": "[0,255]"
 		},
-	
+
+		"uint8_t":{
+			"size": "[2,32];100",
+			"available[size]": "[0,255]",
+			"allocated[size][size]": "[0,255]",
+			"max[size][size]": "[0,255]"
+		},
+		
 		"int16_t":{
-			"size": "[2,28];4",
+			"size": "[2,32];100",
 			"available[size]": "[0,3276]",
 			"allocated[size][size]": "[0,65535]",
 			"max[size][size]": "[0,65535]"
 		},
-
-		"int32_t":{
-			"size": "[2,28];4",
-			"available[size]": "[0,4294967295]",
-			"allocated[size][size]": "[0,4294967295]",
-			"max[size][size]": "[0,4294967295]"
+		
+		"uint16_t":{
+			"size": "[2,32];100",
+			"available[size]": "[0,255]",
+			"allocated[size][size]": "[0,255]",
+			"max[size][size]": "[0,255]"
 		},
 
-		"long":{
-			"size": "[2,28];4",
-			"available[size]": "[0,4294967295]",
-			"allocated[size][size]": "[0,4294967295]",
-			"max[size][size]": "[0,4294967295]"
+		"int32_t":{
+			"size": "[2,32];100",
+			"available[size]": "[0,2147483640]",
+			"allocated[size][size]": "[0,2147483640]",
+			"max[size][size]": "[0,2147483640]"
+		},
+		
+		"uint32_t":{
+			"size": "[2,32];100",
+			"available[size]": "[0,255]",
+			"allocated[size][size]": "[0,255]",
+			"max[size][size]": "[0,255]"
+		},
+		
+		"int64_t":{
+			"size": "[2,32];100",
+			"available[size]": "[0,9223372036854775807]",
+			"allocated[size][size]": "[0,9223372036854775807]",
+			"max[size][size]": "[0,9223372036854775807]"
+		},
+		
+		"uint64_t":{
+			"size": "[2,32];100",
+			"available[size]": "[0,255]",
+			"allocated[size][size]": "[0,255]",
+			"max[size][size]": "[0,255]"
 		},
 
 		"float":{
-			"size": "[2,28];4",
+			"size": "[2,32];100",
 			"available[size]": "[0,4294967295]",
 			"allocated[size][size]": "[0,4294967295]",
 			"max[size][size]": "[0,4294967295]"
+		},
+		
+		"double":{
+			"size": "[2,32];100",
+			"available[size]": "[0,9223372036854775807]",
+			"allocated[size][size]": "[0,9223372036854775807]",
+			"max[size][size]": "[0,9223372036854775807]"
 		}
 	},
 	
 	"Leon3":
 	{
 		"int8_t":{
-			"size": "[2,28];4",
+			"size": "[2,32];100",
 			"available[size]": "[0,255]",
 			"allocated[size][size]": "[0,255]",
 			"max[size][size]": "[0,255]"
 		},
 
+		"uint8_t":{
+			"size": "[2,32];100",
+			"available[size]": "[0,255]",
+			"allocated[size][size]": "[0,255]",
+			"max[size][size]": "[0,255]"
+		},
+		
 		"int16_t":{
-			"size": "[2,28];4",
+			"size": "[2,32];100",
 			"available[size]": "[0,3276]",
 			"allocated[size][size]": "[0,65535]",
 			"max[size][size]": "[0,65535]"
 		},
-
-		"int32_t":{
-			"size": "[2,28];4",
-			"available[size]": "[0,4294967295]",
-			"allocated[size][size]": "[0,4294967295]",
-			"max[size][size]": "[0,4294967295]"
+		
+		"uint16_t":{
+			"size": "[2,32];100",
+			"available[size]": "[0,255]",
+			"allocated[size][size]": "[0,255]",
+			"max[size][size]": "[0,255]"
 		},
 
-		"long":{
-			"size": "[2,28];4",
-			"available[size]": "[0,4294967295]",
-			"allocated[size][size]": "[0,4294967295]",
-			"max[size][size]": "[0,4294967295]"
+		"int32_t":{
+			"size": "[2,32];100",
+			"available[size]": "[0,2147483640]",
+			"allocated[size][size]": "[0,2147483640]",
+			"max[size][size]": "[0,2147483640]"
+		},
+		
+		"uint32_t":{
+			"size": "[2,32];100",
+			"available[size]": "[0,255]",
+			"allocated[size][size]": "[0,255]",
+			"max[size][size]": "[0,255]"
+		},
+		
+		"int64_t":{
+			"size": "[2,32];100",
+			"available[size]": "[0,9223372036854775807]",
+			"allocated[size][size]": "[0,9223372036854775807]",
+			"max[size][size]": "[0,9223372036854775807]"
+		},
+		
+		"uint64_t":{
+			"size": "[2,32];100",
+			"available[size]": "[0,255]",
+			"allocated[size][size]": "[0,255]",
+			"max[size][size]": "[0,255]"
 		},
 
 		"float":{
-			"size": "[2,28];4",
+			"size": "[2,32];100",
 			"available[size]": "[0,4294967295]",
 			"allocated[size][size]": "[0,4294967295]",
 			"max[size][size]": "[0,4294967295]"
+		},
+		
+		"double":{
+			"size": "[2,32];100",
+			"available[size]": "[0,9223372036854775807]",
+			"allocated[size][size]": "[0,9223372036854775807]",
+			"max[size][size]": "[0,9223372036854775807]"
 		}
-	}
+	},
 	
+	"RiscV":
+	{
+		"int8_t":{
+			"size": "[2,32];100",
+			"available[size]": "[0,255]",
+			"allocated[size][size]": "[0,255]",
+			"max[size][size]": "[0,255]"
+		},
+
+		"uint8_t":{
+			"size": "[2,32];100",
+			"available[size]": "[0,255]",
+			"allocated[size][size]": "[0,255]",
+			"max[size][size]": "[0,255]"
+		},
+		
+		"int16_t":{
+			"size": "[2,32];100",
+			"available[size]": "[0,3276]",
+			"allocated[size][size]": "[0,65535]",
+			"max[size][size]": "[0,65535]"
+		},
+		
+		"uint16_t":{
+			"size": "[2,32];100",
+			"available[size]": "[0,255]",
+			"allocated[size][size]": "[0,255]",
+			"max[size][size]": "[0,255]"
+		},
+
+		"int32_t":{
+			"size": "[2,32];100",
+			"available[size]": "[0,2147483640]",
+			"allocated[size][size]": "[0,2147483640]",
+			"max[size][size]": "[0,2147483640]"
+		},
+		
+		"uint32_t":{
+			"size": "[2,32];100",
+			"available[size]": "[0,255]",
+			"allocated[size][size]": "[0,255]",
+			"max[size][size]": "[0,255]"
+		},
+		
+		"int64_t":{
+			"size": "[2,32];100",
+			"available[size]": "[0,9223372036854775807]",
+			"allocated[size][size]": "[0,9223372036854775807]",
+			"max[size][size]": "[0,9223372036854775807]"
+		},
+		
+		"uint64_t":{
+			"size": "[2,32];100",
+			"available[size]": "[0,255]",
+			"allocated[size][size]": "[0,255]",
+			"max[size][size]": "[0,255]"
+		},
+
+		"float":{
+			"size": "[2,32];100",
+			"available[size]": "[0,4294967295]",
+			"allocated[size][size]": "[0,4294967295]",
+			"max[size][size]": "[0,4294967295]"
+		},
+		
+		"double":{
+			"size": "[2,32];100",
+			"available[size]": "[0,9223372036854775807]",
+			"allocated[size][size]": "[0,9223372036854775807]",
+			"max[size][size]": "[0,9223372036854775807]"
+		}
+	}	
 }

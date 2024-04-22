@@ -50,7 +50,7 @@
 #include <stdint.h>
 #include <values.h>
 
-typedef float TARGET_TYPE;
+typedef int64_t TARGET_TYPE;
 typedef uint8_t TARGET_INDEX;
 
    TARGET_TYPE x;
@@ -70,7 +70,7 @@ TARGET_TYPE myabs(TARGET_TYPE x)
       return x;
 }
 
-TARGET_TYPE sqrtfnc(TARGET_TYPE val)
+TARGET_TYPE sqrtfnc()
 {
    x = val/10;
    flag = 0;
@@ -102,5 +102,5 @@ TARGET_TYPE sqrtfnc(TARGET_TYPE val)
 
 void main()
 {
-   sqrtfnc(val);
+	sqrtfnc();
 }

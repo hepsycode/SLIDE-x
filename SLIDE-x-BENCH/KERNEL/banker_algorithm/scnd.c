@@ -2,8 +2,8 @@
 #include <8051.h>
 #include <values.h>
 
-typedef unsigned long TARGET_TYPE;
-typedef unsigned long TARGET_INDEX;
+typedef int8_t TARGET_TYPE;
+typedef uint8_t TARGET_INDEX;
 
 #ifndef NEED
 #define NEED
