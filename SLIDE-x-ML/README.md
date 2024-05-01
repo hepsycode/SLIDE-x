@@ -1,3 +1,0 @@
-# SLIDE-x-ML
-
-WIP

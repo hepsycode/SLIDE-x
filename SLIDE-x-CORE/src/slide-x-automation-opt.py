@@ -18,7 +18,7 @@ import numpy as np
 # Absolute path of the directory containing the configuration files 
 configsrc = dirname(realpath(__file__).rsplit("/", 1)[0])
 projectPath = dirname(configsrc) + '/'
-benchmarkFolder = '/SLIDE-x-BENCH/RECIPE/'  # '/benchmark/POLYBENCH/linear-algebra/kernels/'
+benchmarkFolder = '/SLIDE-x-BENCH/KERNEL/'  # '/benchmark/POLYBENCH/linear-algebra/kernels/'
 
 optFlagsArr = ['-O1',
             '-O1 -fcse-follow-jumps -fno-tree-ter -ftree-vectorize',
@@ -85,7 +85,8 @@ targets = ["int8_t", "int16_t", "int32_t", "int64_t"]  # TARGET_TYPE types
 indexes = ["uint8_t", "uint16_t", "uint32_t", "uint64_t"]  # TARGET_INDEX types
 
 simulations = ['Leon3', 'RiscV', 'Thumb', 'Arm', 'Atmega328p']  # ['Leon3', 'RiscV', 'Atmega328p', 'Thumb', 'Arm']
-functions = ['matrix_mult'] # 'bs', 'bsort100', 'cnt', 'fdct', 'fibcall', 'insertionsort', 'lud', 'matrix_mult', 'select', 'shell_sort'
+functions = [ 'gcd', 'kruskal', 'selectionsort', 'mergesort'] # 'bs', 'bsort100', 'cnt', 'fdct', 'fibcall', 'insertionsort', 'lud', 'matrix_mult', 'select', 'shell_sort'
+# DONE: 'astar', 'banker_algorithm' (TO CHECK), 'bellmanford' (TO CHECK), 'bfs' (TO CHECK), 'binary_search', 'floydwarshall' (TO CHECK),
 
 # simulations = ['Bambu']
 # functions = ['bs', 'bsort100', 'matrix_mult']
@@ -441,7 +442,7 @@ gui = GUI("SLIDE-x GUI", "600x450", True)  # Start GUI
 for idxF, itemF in enumerate(functions):
     for idxM, itemM in enumerate(simulations):
         gui.function = itemF
-        gui.results = projectPath + 'SLIDE-x-AGGR/RECIPE_INT'
+        gui.results = projectPath + 'SLIDE-x-AGGR-RESULTS/KERNEL_INT'
         gui.micro = itemM
 
         cmds = loadCommands()

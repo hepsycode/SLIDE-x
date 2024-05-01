@@ -1,8 +1,8 @@
 #include <stdint.h>
 #include <values.h>
 
-typedef double TARGET_TYPE;
-typedef uint64_t TARGET_INDEX;
+typedef int32_t TARGET_TYPE;
+typedef uint32_t TARGET_INDEX;
 
   TARGET_INDEX i;
   TARGET_INDEX j;

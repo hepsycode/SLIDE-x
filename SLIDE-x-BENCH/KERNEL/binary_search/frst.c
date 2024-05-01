@@ -1,8 +1,8 @@
 #include <stdint.h>
 #include <values.h>
 
-typedef float TARGET_TYPE;
-typedef uint32_t TARGET_INDEX;
+typedef int64_t TARGET_TYPE;
+typedef uint64_t TARGET_INDEX;
 
 //void prototype(int8_t n, int8_t arr[n], int8_t key);
 
