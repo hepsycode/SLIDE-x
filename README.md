@@ -26,6 +26,9 @@ SLIDE-x supports synthesis for FPGAs through the **SLIDE-x-FPGA** parser and Sys
 
 SLIDE-x can be used to enhance Systel-Level HW/SW Co-Design methodologies, frameworks, and tools functionalities such as HEPSYCODE, a System-Level methodology and tool for HW/SW **CO-DE**sign of **HE**terogeneous **P**arallel dedicated **SY**stems. The enhanced version is called **HEPSYCODE-x**. SLIDE-x can be also used to define metrics for Design Space Exploration (DSE) of embedded systems and CPSs. It has been used in HEPSYCODE to improve the **P**artitioning, **A**rchitecture definition, and **M**apping (PAM) DSE tool. The improved version, called **PAM-x** uses GIMPLE-SSA-OPTIMIZED intermediate representations (IR).
 
+SLIDE-x has been used in the following projects: 
+1. **SLIDE-x-ML**: Results with Bambu HLS on various FPGAs (i.e., Stratix-V, Artix-7, Virtex-7, Zynq-700) were used to predict the performance of C functions synthesized as HW components. The project is accessible at the following link: https://github.com/hepsycode/SLIDE-x-ML-ICCD
+
 ### WEBSITE
 [www.HEPSYCODE.com](https://hepsycode.github.io/)
 
