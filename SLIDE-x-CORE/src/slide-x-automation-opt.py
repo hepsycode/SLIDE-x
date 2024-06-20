@@ -77,17 +77,22 @@ indexes = ["uint8_t", "uint8_t"]  # TARGET_INDEX types
 
 # DONE INT: 'bs', 'bsort100', 'cnt', 'fac', 'fdct', 'fft', 'fibcall', 'insertionsort', 'lud', 'matrix_mult', 'park_miller', 'prime', 'select', 'shell_sort', 'sqrt'
 
+simulations = ['Bambu'] 
+# DONE 'bs'
+
 simulations = ['Leon3', 'Atmega328p', 'Thumb', 'Arm']   #  , 'RiscV'
 functions = ['bs', 'bsort100', 'cnt', 'fdct', 'fibcall', 'insertionsort', 'lud', 'matrix_mult', 'select', 'shell_sort']  
 """
 
-targets = ["int8_t", "int16_t", "int32_t", "int64_t"]  # TARGET_TYPE types
-indexes = ["uint8_t", "uint16_t", "uint32_t", "uint64_t"]  # TARGET_INDEX types
+targets = ["float", "double"]  # TARGET_TYPE types
+indexes = ["uint8_t", "uint8_t"]  # TARGET_INDEX types
 
-simulations = ['Leon3', 'RiscV', 'Thumb', 'Arm', 'Atmega328p']  # ['Leon3', 'RiscV', 'Atmega328p', 'Thumb', 'Arm']
-functions = ['matrix_mult'] # 'bs', 'bsort100', 'cnt', 'fdct', 'fibcall', 'insertionsort', 'lud', 'matrix_mult', 'select', 'shell_sort'
+simulations = ['Bambu']  # ['Leon3', 'RiscV', 'Atmega328p', 'Thumb', 'Arm']
+functions = ['select', 'shell_sort', 'fdct'] # 'bs', 'bsort100', 'cnt', 'fdct', 'fibcall', 'insertionsort', 'lud', 'matrix_mult', 'select', 'shell_sort'
 
-# simulations = ['Bambu']
+# 'bs', 'bsort100', 'cnt', 'fibcall', 'insertionsort', 'lud', 'matrix_mult', 'park_miller', 'prime', 'fdct', 'sqrt', 'fft'
+# DONE: 'bs', 'bsort100' (to check int64), 'cnt', 'fibcall', 'insertionsort',
+# simulations = ['Bambu'] PROBLEM: 'fac', 'fft',
 # functions = ['bs', 'bsort100', 'matrix_mult']
 
 # targets = ["uint8_t", "uint16_t", "uint32_t", "uint64_t", "float", "double"]  # float, double
@@ -441,7 +446,7 @@ gui = GUI("SLIDE-x GUI", "600x450", True)  # Start GUI
 for idxF, itemF in enumerate(functions):
     for idxM, itemM in enumerate(simulations):
         gui.function = itemF
-        gui.results = projectPath + 'SLIDE-x-AGGR/RECIPE_INT'
+        gui.results = projectPath + 'SLIDE-x-AGGR/RECIPE_DECIMAL'
         gui.micro = itemM
 
         cmds = loadCommands()
@@ -707,13 +712,17 @@ for idxF, itemF in enumerate(functions):
                         cmdMan.executeCommandSet(cmds[gui.micro], inputsPath, 'files', parsingFunction=parser.run)
                         print("ISS Performance Simulation Done!")
 
-                    if gui.micro != '8051':
+                    if gui.micro != '8051' and gui.micro != 'Bambu':
 
                         if os.path.exists(gui.results + "/Size.csv"):
                             os.remove(gui.results + "/Size.csv")
 
                         parser = Parser(gui.results + "/Size.csv", Parser.getSizeRow)
                         parser.sizeParser(gui.results + "/files")
+                        print("Size Done!")
+
+                    elif gui.micro == 'Bambu':
+
                         print("Size Done!")
 
                     else:
@@ -782,9 +791,11 @@ for idxF, itemF in enumerate(functions):
                 files = getFiles('.', '.csv') + getFiles('.', '.txt')
                 for file in files:
                     if (file == "cc4csValues.csv" or file == "Size.csv" or file == "inputResume.csv" or file == "Affinity.csv" or
-                            file == "CC4CSFrameworkExecutionTime.csv"):
+                            file == "CC4CSFrameworkExecutionTime.csv" or file == '*.txt'):
                         # move(file, join(target, file))
                         shutil.copyfile(file, join(dirs, file))
+                    elif file.endswith('.txt'):
+                        shutil.move(file, join(dirs, file))
 
                 if os.path.exists("cc4csValues.csv"):
                     os.remove("cc4csValues.csv")
