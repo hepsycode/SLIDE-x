@@ -18,7 +18,7 @@ import numpy as np
 # Absolute path of the directory containing the configuration files 
 configsrc = dirname(realpath(__file__).rsplit("/", 1)[0])
 projectPath = dirname(configsrc) + '/'
-benchmarkFolder = '/SLIDE-x-BENCH/POLYBENCH/'  # '/benchmark/POLYBENCH/linear-algebra/kernels/'  KERNEL
+benchmarkFolder = '/SLIDE-x-BENCH/RECIPE/'  # '/benchmark/POLYBENCH/linear-algebra/kernels/'  KERNEL   POLYBENCH
 
 optFlags = '-O2'
 optNameFolder = 'optO2-00'
@@ -30,8 +30,8 @@ matrixFolderName = '32x32'
 filess = {'8051': 'scnd.c', 'Leon3': 'frst.c', 'Thumb': 'frst.c', 'Atmega328p': 'frst.c', 'Arm': 'frst.c',
           'Bambu': 'frst.c', 'RiscV': 'frst.c', 'ALL': 'frst.c'}
 
-targets = ["int8_t", "int16_t", "int32_t", "int64_t", "float", "double"]  # TARGET_TYPE types    # "int32_t", "float"
-indexes = ["uint8_t", "uint16_t", "uint32_t", "uint64_t", "uint32_t", "uint64_t"]  # TARGET_INDEX types   # "uint8_t", "uint16_t", "uint32_t", "uint64_t", "uint32_t", "uint64_t"
+targets = ["int8_t", "int16_t", "int32_t", "int64_t"]  # TARGET_TYPE types    # "int32_t", "float"
+indexes = ["uint8_t", "uint8_t", "uint8_t", "uint8_t"]  # TARGET_INDEX types   # "uint8_t", "uint16_t", "uint32_t", "uint64_t", "uint32_t", "uint64_t"
 
 # targets = ["int8_t", "int16_t", "int32_t", "int64_t"]  # TARGET_TYPE types    # , "float"
 # indexes = ["uint8_t", "uint8_t", "uint8_t", "uint8_t"]  # TARGET_INDEX types   # , "uint8_t"
@@ -642,13 +642,17 @@ for target, index in zip(targets, indexes):
             cmdMan.executeCommandSet(cmds[gui.micro], inputsPath, 'files', parsingFunction=parser.run)
             print("ISS Performance Simulation Done!")
 
-        if gui.micro != '8051':
+        if gui.micro != '8051' and gui.micro != 'Bambu':
 
             if os.path.exists(gui.results + "/Size.csv"):
                 os.remove(gui.results + "/Size.csv")
 
             parser = Parser(gui.results + "/Size.csv", Parser.getSizeRow)
             parser.sizeParser(gui.results + "/files")
+            print("Size Done!")
+
+        elif gui.micro == 'Bambu':
+
             print("Size Done!")
 
         else:
@@ -719,6 +723,8 @@ for target, index in zip(targets, indexes):
                 file == "CC4CSFrameworkExecutionTime.csv"):
             # move(file, join(target, file))
             shutil.copyfile(file, join(dirs, file))
+        elif file.endswith('.txt'):
+            shutil.move(file, join(dirs, file))
 
     if os.path.exists("cc4csValues.csv"):
         os.remove("cc4csValues.csv")
