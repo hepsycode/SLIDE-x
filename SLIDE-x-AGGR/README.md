@@ -1,3 +1,0 @@
-# SLIDE-x-AGGR
-
-WIP

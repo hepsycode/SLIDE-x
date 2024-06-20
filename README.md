@@ -8,7 +8,7 @@
 ## Installation instructions
 
 ### OVERVIEW
- SLIDE-x is an open-source Python tool that facilitates the System-Level HW/SW Co-Design of embedded systems and Cyber-Physical Systems (CPSs) through the creation of datasets useful for analysis, comparison, and simulations/predictions. These datasets can be used to evaluate HW/SW performance, select the most suitable embedded platform, and perform HW/SW trade-off analysis.
+SLIDE-x is an open-source Python tool that facilitates the System-Level HW/SW Co-Design of embedded systems and Cyber-Physical Systems (CPSs) through the creation of datasets useful for analysis, comparison, and simulations/predictions. These datasets can be used to evaluate HW/SW performance, select the most suitable embedded platform, and perform HW/SW trade-off analysis.
 
 ### SLIDE-x Main Components
 SLIDE-x consists of the following components:
@@ -20,15 +20,20 @@ SLIDE-x consists of the following components:
    - **SLIDE-x-Sim**: Extensible Python HW/SW Simulation-driven component, where designers can execute the benchmark C function using several simulators for different processors. The component saves metrics related to the number of clock cycles, instructions executed, cache miss/hit/access, etc. Depending on the processor technology, an Instruction Set Simulator (ISS) or an HDL Simulator is needed, such as:
      - **SLIDE-x-HLS** Integration with High-Level Synthesis (HLS) tools such as Bambu, Vitis-HLS, and LegUP.
      - **SLIDE-x-ISS** Integration with Instruction Set Simulators (ISS) such as TSIM, Armulator, Thumbulator, Dalton SDCC/ISASIM, SimulAVR, Spike 64-bit RISC-V, x86-64 with Perf.
-3. **SLIDE-x-AGGR**: Extensible Python Dataset Aggregator component for aggregating datasets generated during the Profiling/Simulation activities. It also offers functionalities for implementing unified HW/SW metrics (e.g., CC4CS, CC4IR, CC4SSA, CC4OPT, Affinity), performing statistical analysis, and comparing different platforms.
-4. **SLIDE-x-ML**: HW/SW ML-based component for creating System-Level HW/SW Co-Design models using machine learning frameworks and tools, including MATLAB Statistics and Machine Learning Toolbox (for MATLAB) and TensorFlow/Keras/PyTorch/Scikit-Learn (for Python).
+3. **SLIDE-x-RES**: Result datasets generated during the Profiling/Simulation activities;
 
 SLIDE-x supports synthesis for FPGAs through the **SLIDE-x-FPGA** parser and System-on-Chips (SoCs) through the **SLIDE-x-SoC** parser. Application-Specific Integrated Circuit (ASIC) support is under development.
 
 SLIDE-x can be used to enhance Systel-Level HW/SW Co-Design methodologies, frameworks, and tools functionalities such as HEPSYCODE, a System-Level methodology and tool for HW/SW **CO-DE**sign of **HE**terogeneous **P**arallel dedicated **SY**stems. The enhanced version is called **HEPSYCODE-x**. SLIDE-x can be also used to define metrics for Design Space Exploration (DSE) of embedded systems and CPSs. It has been used in HEPSYCODE to improve the **P**artitioning, **A**rchitecture definition, and **M**apping (PAM) DSE tool. The improved version, called **PAM-x** uses GIMPLE-SSA-OPTIMIZED intermediate representations (IR).
 
+SLIDE-x has been used in the following projects: 
+1. **SLIDE-x-ML**: Results with Bambu HLS on various FPGAs (i.e., Stratix-V, Artix-7, Virtex-7, Zynq-700) were used to predict the performance of C functions synthesized as HW components. The project is accessible at the following link: https://github.com/hepsycode/SLIDE-x-ML-ICCD
+
 ### WEBSITE
+**REMOVED FOR DOUBLE BLIND REVIEW**
+<!--
 [www.HEPSYCODE.com](https://hepsycode.github.io/)
+-->
 
 ### DOWNLOAD
 SLIDE-x is open-source and freely available on GitHub: https://github.com/hepsycode/SLIDE-x.
@@ -37,7 +42,7 @@ SLIDE-x is open-source and freely available on GitHub: https://github.com/hepsyc
 
 <p><img src="img/screen.png" width="700" height="387"></p>
 
-### INSTALLATION
+### GETTING STARTED GUIDELINES
 The installation of the framework goes through a few simple steps. All that is required is to install the tools exploited by the framework at each step: Profiling (i.e., gcov), Static Analysis (i.e., Frama-c), and Simulation (i.e., ISS/HLS). For a deeper insight into the commands executed to perform each phase, the user can look at the `/SLIDE-x-CORE/src/cmds.json` file.
 
 The framework is implemented in Python3 and uses the csv, os, shutil, subprocess, tkinter libraries for internal operations. Thus, Python3 and the above-listed libraries should be installed for the framework to run properly. 
@@ -95,8 +100,9 @@ You can use the code from these repositories to experiment, test, build, and cre
 For any bug or doubt, contact us or open an issue.
  
 ### SUPPORT
-We currently support:
+We currently support: **REMOVED FOR DOUBLE BLIND REVIEW**
 
+<!--
  1. Email: 
     - Vittoriano Muttillo:
        - vittoriano.muttillo@guest.univaq.it,
@@ -106,21 +112,17 @@ We currently support:
     	- v.stoico@vu.nl
     - (please take care to use \[SLICE-x SUPPORT\] as object
  2. Issues on GitHub
- 
-## Getting Started Guidelines
-To get started with SLIDE-x, you can:
-
- 1. Clone this repository to your local machine.
- 2. Import the plugin projects in the HEPSYCODE-GUI directory in Eclipse.
- 3. Use the HEPSYCODE Sirius-based tool to create and edit your HEPSYCODE models.
- 4. Generate code from your HEPSYCODE models using the HEPSYCODE M2M XText transformation code.
- 5. Simulate your HEPSYCODE models using the HEPSYCODE HEPSIM2 simulator. Examples are available in the HEPSYCODE-Workbench folder.
+ -->
 
 ## Additional information
+**REMOVED FOR DOUBLE BLIND REVIEW**
+<!-- 
 Research publications are available at https://hepsycode.github.io/ and http://www.pomante.net/sito_gg/Publications.htm
+-->
 
 ## How to Cite?
-If you use SLIDE-x in your research, please cite:
+If you use SLIDE-x in your research, please cite: **REMOVED FOR DOUBLE BLIND REVIEW**
+<!--
 ```
 @inproceedings{Muttillo2018,
 	author = {Muttillo, Vittoriano and Valente, Giacomo and Pomante, Luigi and
@@ -142,3 +144,4 @@ If you use SLIDE-x in your research, please cite:
 	series = {ICPE '18}
 }
 ```
+-->

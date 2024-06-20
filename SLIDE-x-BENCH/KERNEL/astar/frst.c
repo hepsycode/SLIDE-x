@@ -2,7 +2,7 @@
 #include <values.h>
 #include <stdio.h>
 
-typedef double TARGET_TYPE;
+typedef int64_t TARGET_TYPE;
 typedef uint64_t TARGET_INDEX;
 
 //void prototype(int8_t size, int8_t a[size][size], int8_t goal);
