@@ -18,9 +18,12 @@ import numpy as np
 # Absolute path of the directory containing the configuration files 
 configsrc = dirname(realpath(__file__).rsplit("/", 1)[0])
 projectPath = dirname(configsrc) + '/'
-benchmarkFolder = '/SLIDE-x-BENCH/KERNEL/'  # '/benchmark/POLYBENCH/linear-algebra/kernels/'
+benchmarkFolder = '/SLIDE-x-BENCH/RECIPE/'  # '/benchmark/POLYBENCH/linear-algebra/kernels/'
 
-optFlagsArr = ['-O1',
+optFlagsArr = (['-O1'])
+
+"""
+    ,
             '-O1 -fcse-follow-jumps -fno-tree-ter -ftree-vectorize',
             '-O1 -fno-cprop-registers -fno-dce -fno-move-loop-invariants -frename-registers -fno-tree-copy-prop -fno-tree-copyrename',
             '-O1 -freorder-blocks -fschedule-insns -fno-tree-ccp -fno-tree-dominator-opts',
@@ -42,6 +45,7 @@ optFlagsArr = ['-O1',
             '-O3 -fno-inline-functions-called-once -fno-regmove -frename-registers -fno-tree-copyrename',
             '-O3 -fno-inline-functions -fno-move-loop-invariants',
             '-Os', '-Ofast', '-Og']  # 23 Optimization flags
+"""
 
 optNameFolderArr = ['optO1-00', 'optO1-01', 'optO1-02', 'optO1-03',
                     'optO2-00', 'optO2-01', 'optO2-02', 'optO2-03', 'optO3-04', 'optO2-05', 'optO2-06', 'optO2-07', 'optO2-08', 'optO2-09',
@@ -84,11 +88,12 @@ simulations = ['Leon3', 'Atmega328p', 'Thumb', 'Arm']   #  , 'RiscV'
 functions = ['bs', 'bsort100', 'cnt', 'fdct', 'fibcall', 'insertionsort', 'lud', 'matrix_mult', 'select', 'shell_sort']  
 """
 
-targets = ["float", "double"]  # TARGET_TYPE types
-indexes = ["uint8_t", "uint8_t"]  # TARGET_INDEX types
+targets = ["int8_t", "int16_t", "int32_t", "int64_t"]  # TARGET_TYPE types   "float", "double"
+indexes = ["uint8_t", "uint8_t", "uint8_t", "uint8_t"]  # TARGET_INDEX types
 
-simulations = ['Bambu']  # ['Leon3', 'RiscV', 'Atmega328p', 'Thumb', 'Arm']
-functions = ['select', 'shell_sort', 'fdct'] # 'bs', 'bsort100', 'cnt', 'fdct', 'fibcall', 'insertionsort', 'lud', 'matrix_mult', 'select', 'shell_sort'
+simulations = ['Leon3']  # ['Leon3', 'RiscV', 'Atmega328p', 'Thumb', 'Arm']
+functions = ['bs']
+# 'bs', 'bsort100', 'cnt', 'fdct', 'fibcall', 'insertionsort', 'lud', 'matrix_mult', 'select', 'shell_sort'
 
 # simulations = ['Leon3', 'RiscV', 'Thumb', 'Arm', 'Atmega328p']  # ['Leon3', 'RiscV', 'Atmega328p', 'Thumb', 'Arm']
 # functions = [ 'gcd', 'kruskal', 'selectionsort', 'mergesort'] # 'bs', 'bsort100', 'cnt', 'fdct', 'fibcall', 'insertionsort', 'lud', 'matrix_mult', 'select', 'shell_sort'
@@ -451,7 +456,7 @@ for idxF, itemF in enumerate(functions):
     for idxM, itemM in enumerate(simulations):
         gui.function = itemF
         
-        gui.results = projectPath + 'SLIDE-x-AGGR/RECIPE_DECIMAL'
+        gui.results = projectPath + 'SLIDE-x-AGGR/Example'
         # gui.results = projectPath + 'SLIDE-x-AGGR-RESULTS/KERNEL_INT'
         gui.micro = itemM
 
@@ -846,7 +851,8 @@ for idxF, itemF in enumerate(functions):
                 #    os.remove("parameters.json")
 
                 # rmtree("includes/")
-                rmtree("files/")
-                rmtree("files_gcov/")
-            rmtree("files_framac/")
+                # rmtree("files/")
+                # rmtree("files_gcov/")
+
+            # rmtree("files_framac/")
             # rmtree("filesISS/")
