@@ -2,7 +2,7 @@
 #include <values.h>
 
 typedef double TARGET_TYPE;
-typedef uint64_t TARGET_INDEX;
+typedef uint8_t TARGET_INDEX;
 
 void selectionsort()
 {

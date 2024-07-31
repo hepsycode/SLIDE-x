@@ -1,8 +1,8 @@
 #include <stdint.h>
 #include <values.h>
 
-typedef int32_t TARGET_TYPE;
-typedef uint32_t TARGET_INDEX;
+typedef double TARGET_TYPE;
+typedef uint8_t TARGET_INDEX;
 
 TARGET_TYPE dist[size];
 TARGET_INDEX i, j = 0;
