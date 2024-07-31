@@ -18,12 +18,9 @@ import numpy as np
 # Absolute path of the directory containing the configuration files 
 configsrc = dirname(realpath(__file__).rsplit("/", 1)[0])
 projectPath = dirname(configsrc) + '/'
-benchmarkFolder = '/SLIDE-x-BENCH/RECIPE/'  # '/benchmark/POLYBENCH/linear-algebra/kernels/'
+benchmarkFolder = '/SLIDE-x-BENCH/KERNEL/'  # '/benchmark/POLYBENCH/linear-algebra/kernels/'
 
-optFlagsArr = (['-O1'])
-
-"""
-    ,
+optFlagsArr = (['-O1',
             '-O1 -fcse-follow-jumps -fno-tree-ter -ftree-vectorize',
             '-O1 -fno-cprop-registers -fno-dce -fno-move-loop-invariants -frename-registers -fno-tree-copy-prop -fno-tree-copyrename',
             '-O1 -freorder-blocks -fschedule-insns -fno-tree-ccp -fno-tree-dominator-opts',
@@ -44,8 +41,7 @@ optFlagsArr = (['-O1'])
             '-O3 -fno-gcse -floop-strip-mine -fno-move-loop-invariants -fno-predictive-commoning -ftracer',
             '-O3 -fno-inline-functions-called-once -fno-regmove -frename-registers -fno-tree-copyrename',
             '-O3 -fno-inline-functions -fno-move-loop-invariants',
-            '-Os', '-Ofast', '-Og']  # 23 Optimization flags
-"""
+            '-Os', '-Ofast', '-Og'])  # 23 Optimization flags
 
 optNameFolderArr = ['optO1-00', 'optO1-01', 'optO1-02', 'optO1-03',
                     'optO2-00', 'optO2-01', 'optO2-02', 'optO2-03', 'optO3-04', 'optO2-05', 'optO2-06', 'optO2-07', 'optO2-08', 'optO2-09',
@@ -57,60 +53,51 @@ matrixFolderName = '32x32'
 # TODO: automatic switching between signed and unsigned types
 # Global Variables
 filess = {'8051': 'scnd.c', 'Leon3': 'frst.c', 'Thumb': 'frst.c', 'Atmega328p': 'frst.c', 'Arm': 'frst.c',
-          'Bambu': 'frst.c', 'RiscV': 'frst.c', 'ALL': 'frst.c'}
+          'Bambu': 'frst.c', 'RiscV': 'frst.c', 'ALL': 'frst.c', 'Perf': 'frst.c'}
 
+targets = ["float", "double"]
 # targets = ["int8_t", "int16_t", "int32_t", "int64_t", "float", "double"]  # TARGET_TYPE types
-# indexes = ["uint8_t", "uint8_t", "uint8_t", "uint8_t", "uint8_t", "uint8_t"]  # TARGET_INDEX types
 
-# targets = ["float", "double"]  # TARGET_TYPE types
-# indexes = ["uint8_t", "uint8_t"]  # TARGET_INDEX types
+indexes = ["uint8_t", "uint8_t"]
+# indexes = ["uint8_t", "int16_t", "int32_t", "int64_t"]  # TARGET_INDEX types
 
-# functions = ['bs', 'bsort100', 'cnt', 'matrix_mult'] # Functions that admits FPU operations
+simulations = ['Leon3']
+# simulations = ['Leon3', 'RiscV', 'Atmega328p', 'Thumb', 'Arm', 'Bambu', 'Perf']
+functions = ['astar', 'banker_algorithm', 'bellmanford', 'bfs', 'floydwarshall', 'gcd', 'kruskal', 'mergesort', 'selectionsort']
 
-"""
-# KERNEL
-targets = ["int8_t", "int16_t", "int32_t", "int64_t"]  # TARGET_TYPE types
-indexes = ["uint8_t", "uint16_t", "uint32_t", "uint64_t"]  # TARGET_INDEX types
+# RECIPE INT:
+# 'bs', 'bsort100', 'cnt', 'fac', 'fdct', 'fft', 'fibcall', 'insertionsort', 'lud', 'matrix_mult', 'park_miller', 'prime', 'select', 'shell_sort', 'sqrt'
 
-simulations = ['Leon3', 'Atmega328p', 'Thumb', 'Arm', 'RiscV']   #  , 'RiscV'
-functions = ['astar', 'banker_algorithm', 'bellmanford', 'bfs', 'binary_search', 'floydwarshall', 'gcd', 'kruskal', 'selectionsort']  #  , 'binary_search' NO FLOAT 'mergesort' NO ARM
+# RECIPE DECIMAL:
+# 'bs', 'bsort100', 'cnt', 'fibcall', 'insertionsort', 'lud', 'matrix_mult', 'select', 'shell_sort'
 
-# RECIPE
-targets = ["float", "double"]  # TARGET_TYPE types
-indexes = ["uint8_t", "uint8_t"]  # TARGET_INDEX types
+# KERNEL INT:
+# 'astar', 'banker_algorithm', 'bellmanford', 'bfs', 'binary_search', 'floydwarshall', 'gcd', 'kruskal', 'mergesort', 'selectionsort'
 
-# DONE INT: 'bs', 'bsort100', 'cnt', 'fac', 'fdct', 'fft', 'fibcall', 'insertionsort', 'lud', 'matrix_mult', 'park_miller', 'prime', 'select', 'shell_sort', 'sqrt'
+# KERNEL DECIMAL:
+# 'astar', 'banker_algorithm', 'bellmanford', 'bfs', 'floydwarshall', 'gcd', 'kruskal', 'mergesort', 'selectionsort'
 
-simulations = ['Bambu'] 
-# DONE 'bs'
+# POLYBENCH (linear-algebra/kernels)
+# '2mm', '3mm', 'atax', 'bicg', 'cholesky', 'doitgen', 'gemm', 'gemver', 'gesummv', 'mvt', 'symm', 'syr2k', 'syrk', 'trisolv', 'trmm'
 
-simulations = ['Leon3', 'Atmega328p', 'Thumb', 'Arm']   #  , 'RiscV'
-functions = ['bs', 'bsort100', 'cnt', 'fdct', 'fibcall', 'insertionsort', 'lud', 'matrix_mult', 'select', 'shell_sort']  
-"""
+# POLYBENCH (linear-algebra/solvers)
+# 'durbin', 'dynprog', 'gramschmidt', 'lu', 'ludcmp'
 
-targets = ["int8_t", "int16_t", "int32_t", "int64_t"]  # TARGET_TYPE types   "float", "double"
-indexes = ["uint8_t", "uint8_t", "uint8_t", "uint8_t"]  # TARGET_INDEX types
+# POLYBENCH (datamining)
+# 'correlation', 'covariance'
 
-simulations = ['Leon3']  # ['Leon3', 'RiscV', 'Atmega328p', 'Thumb', 'Arm']
-functions = ['bs']
-# 'bs', 'bsort100', 'cnt', 'fdct', 'fibcall', 'insertionsort', 'lud', 'matrix_mult', 'select', 'shell_sort'
+# POLYBENCH (medley)
+# 'floyd-warshall', 'reg_detect'
 
-# simulations = ['Leon3', 'RiscV', 'Thumb', 'Arm', 'Atmega328p']  # ['Leon3', 'RiscV', 'Atmega328p', 'Thumb', 'Arm']
-# functions = [ 'gcd', 'kruskal', 'selectionsort', 'mergesort'] # 'bs', 'bsort100', 'cnt', 'fdct', 'fibcall', 'insertionsort', 'lud', 'matrix_mult', 'select', 'shell_sort'
-# DONE: 'astar', 'banker_algorithm' (TO CHECK), 'bellmanford' (TO CHECK), 'bfs' (TO CHECK), 'binary_search', 'floydwarshall' (TO CHECK),
+# POLYBENCH (stencil)
+# 'adi', 'convolution-2d', 'convolution-3d', 'fdtd-2d', 'jacobi-1d-imper', 'jacobi-2d-imper', 'seidel-2d'
 
-# 'bs', 'bsort100', 'cnt', 'fibcall', 'insertionsort', 'lud', 'matrix_mult', 'park_miller', 'prime', 'fdct', 'sqrt', 'fft'
-# DONE: 'bs', 'bsort100' (to check int64), 'cnt', 'fibcall', 'insertionsort',
-# simulations = ['Bambu'] PROBLEM: 'fac', 'fft',
-# functions = ['bs', 'bsort100', 'matrix_mult']
-
-# targets = ["uint8_t", "uint16_t", "uint32_t", "uint64_t", "float", "double"]  # float, double
-# indexes = ["uint8_t", "uint16_t", "uint32_t", "uint64_t"]
+# AFFINITY (control group):
+# 'bitrev', 'can_can', 'can_dsp', 'conv', 'corr', 'dir', 'dot', 'fir', 'fir_dps', 'ipow', 'maxx', 'mm', 'order', 'bin2dec', 'sos', 'tap', 'vecpermat', 'dwt1d', 'dwt2d', 'idwt1d', 'idwt2d', 'max', 'wave', 'wrap', 'viterbi'
 
 headers = [
     'ID', 'CInstr', 'AssemblyInstr', 'ClockCycles', 'ExecutionTime', 'CC4CS'
 ]  # headers of the output csv
-
 
 def loadCommands():
     # Gets the commands from cmds.json
@@ -456,7 +443,7 @@ for idxF, itemF in enumerate(functions):
     for idxM, itemM in enumerate(simulations):
         gui.function = itemF
         
-        gui.results = projectPath + 'SLIDE-x-AGGR/Example'
+        gui.results = projectPath + 'SLIDE-x-AGGR/KERNEL_DECIMAL_LEON3'
         # gui.results = projectPath + 'SLIDE-x-AGGR-RESULTS/KERNEL_INT'
         gui.micro = itemM
 
