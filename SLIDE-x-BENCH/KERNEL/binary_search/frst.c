@@ -2,7 +2,7 @@
 #include <values.h>
 
 typedef int64_t TARGET_TYPE;
-typedef uint64_t TARGET_INDEX;
+typedef uint8_t TARGET_INDEX;
 
 //void prototype(int8_t n, int8_t arr[n], int8_t key);
 

@@ -446,6 +446,7 @@ for idxF, itemF in enumerate(functions):
         
         gui.results = projectPath + 'SLIDE-x-AGGR/KERNEL_DECIMAL_LEON3'
         # gui.results = projectPath + 'SLIDE-x-AGGR-RESULTS/KERNEL_INT'
+
         gui.micro = itemM
 
         cmds = loadCommands()
