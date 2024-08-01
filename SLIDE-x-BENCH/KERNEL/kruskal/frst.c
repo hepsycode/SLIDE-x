@@ -1,8 +1,8 @@
 #include <stdint.h>
 #include <values.h>
 
-typedef int16_t TARGET_TYPE;
-typedef uint16_t TARGET_INDEX;
+typedef double TARGET_TYPE;
+typedef uint64_t TARGET_INDEX;
 
 
 /* This data structure is used to maintain the disjoint sets */

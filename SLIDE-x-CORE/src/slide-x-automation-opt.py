@@ -58,12 +58,13 @@ filess = {'8051': 'scnd.c', 'Leon3': 'frst.c', 'Thumb': 'frst.c', 'Atmega328p': 
 targets = ["float", "double"]
 # targets = ["int8_t", "int16_t", "int32_t", "int64_t", "float", "double"]  # TARGET_TYPE types
 
-indexes = ["uint8_t", "uint8_t"]
+indexes = ["uint32_t", "uint64_t"]
 # indexes = ["uint8_t", "int16_t", "int32_t", "int64_t"]  # TARGET_INDEX types
 
 simulations = ['Leon3']
 # simulations = ['Leon3', 'RiscV', 'Atmega328p', 'Thumb', 'Arm', 'Bambu', 'Perf']
-functions = ['astar', 'banker_algorithm', 'bellmanford', 'bfs', 'floydwarshall', 'gcd', 'kruskal', 'mergesort', 'selectionsort']
+
+functions = ['kruskal']  # TODO: 'kruskal',
 
 # RECIPE INT:
 # 'bs', 'bsort100', 'cnt', 'fac', 'fdct', 'fft', 'fibcall', 'insertionsort', 'lud', 'matrix_mult', 'park_miller', 'prime', 'select', 'shell_sort', 'sqrt'
