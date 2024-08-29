@@ -30,10 +30,7 @@ SLIDE-x has been used in the following projects:
 1. **SLIDE-x-ML**: Results with Bambu HLS on various FPGAs (i.e., Stratix-V, Artix-7, Virtex-7, Zynq-700) were used to predict the performance of C functions synthesized as HW components. The project is accessible at the following link: https://github.com/hepsycode/SLIDE-x-ML-ICCD
 
 ### WEBSITE
-**REMOVED FOR DOUBLE BLIND REVIEW**
-<!--
 [www.HEPSYCODE.com](https://hepsycode.github.io/)
--->
 
 ### DOWNLOAD
 SLIDE-x is open-source and freely available on GitHub: https://github.com/hepsycode/SLIDE-x.
@@ -100,9 +97,8 @@ You can use the code from these repositories to experiment, test, build, and cre
 For any bug or doubt, contact us or open an issue.
  
 ### SUPPORT
-We currently support: **REMOVED FOR DOUBLE BLIND REVIEW**
+We currently support: 
 
-<!--
  1. Email: 
     - Vittoriano Muttillo:
        - vittoriano.muttillo@guest.univaq.it,
@@ -112,17 +108,12 @@ We currently support: **REMOVED FOR DOUBLE BLIND REVIEW**
     	- v.stoico@vu.nl
     - (please take care to use \[SLICE-x SUPPORT\] as object
  2. Issues on GitHub
- -->
 
 ## Additional information
-**REMOVED FOR DOUBLE BLIND REVIEW**
-<!-- 
 Research publications are available at https://hepsycode.github.io/ and http://www.pomante.net/sito_gg/Publications.htm
--->
 
 ## How to Cite?
-If you use SLIDE-x in your research, please cite: **REMOVED FOR DOUBLE BLIND REVIEW**
-<!--
+If you use SLIDE-x in your research, please cite: 
 ```
 @inproceedings{Muttillo2018,
 	author = {Muttillo, Vittoriano and Valente, Giacomo and Pomante, Luigi and
@@ -144,4 +135,3 @@ If you use SLIDE-x in your research, please cite: **REMOVED FOR DOUBLE BLIND REV
 	series = {ICPE '18}
 }
 ```
--->
