@@ -112,28 +112,17 @@ We currently support:
 ## Additional information
 Research publications are available at https://hepsycode.github.io/ and http://www.pomante.net/sito_gg/Publications.htm
 
-<!--
 ## How to Cite?
 If you use SLIDE-x in your research, please cite: 
 ```
-@inproceedings{Muttillo2018,
-	author = {Muttillo, Vittoriano and Valente, Giacomo and Pomante, Luigi and
-	Stoico, Vincenzo and D'Antonio, Fausto and Salice, Fabio},
-	title = {CC4CS: an Off-the-Shelf Unifying Statement-Level Performance Metric
-	for HW/SW Technologies},
-	year = {2018},
-	isbn = {9781450356299},
-	publisher = {Association for Computing Machinery},
-	address = {New York, NY, USA},
-	url = {https://doi.org/10.1145/3185768.3186291},
-	doi = {10.1145/3185768.3186291},
-	booktitle = {Companion of the 2018 ACM/SPEC International Conference on
-	Performance Engineering},
-	pages = {119–122},
-	numpages = {4},
-	keywords = {system-level metrics, embedded systems, HW/SW co-design},
-	location = {Berlin, Germany},
-	series = {ICPE '18}
+@INPROCEEDINGS{10818089,
+  author={Muttillo, Vittoriano and Stoico, Vincenzo and Santic, Marco and Valente, Giacomo and Pomante, Luigi and Frigioni, Daniele},
+  booktitle={2024 IEEE 42nd International Conference on Computer Design (ICCD)}, 
+  title={SLIDE-x-ML: System-Level Infrastructure for Dataset E-xtraction and Machine Learning Framework for High-Level Synthesis Estimations}, 
+  year={2024},
+  volume={},
+  number={},
+  pages={616-619},
+  doi={10.1109/ICCD63220.2024.00098}
 }
 ```
--->
